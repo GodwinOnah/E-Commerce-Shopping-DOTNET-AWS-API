@@ -8,7 +8,7 @@ namespace API.Controllers
 {
 
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class ProdController: ControllerBase
     {
 
@@ -23,7 +23,7 @@ namespace API.Controllers
 
          [HttpGet("{id}")]
 
-        public string GetProduct(int id)
+        public string GetProducts(int id)
         {
 
    return "this is a product with id: "+id;
