@@ -9,6 +9,6 @@ namespace API.Controllers
     {
         public int id { get; set; }
 
-        public int prodName { get; set; }
+        public String prodName { get; set; }
     }
 }

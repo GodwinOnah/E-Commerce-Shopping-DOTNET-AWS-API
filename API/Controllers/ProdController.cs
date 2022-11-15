@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
@@ -11,22 +13,32 @@ namespace API.Controllers
     [Route("[controller]")]
     public class ProdController: ControllerBase
     {
+        public storeProducts Products { get; }
+        public ProdController(storeProducts products)
+        {
+            this.Products = products;
+        }
 
         [HttpGet]
 
-        public string GetProducts()
+        public async Task<ActionResult<List<Products>>> GetProducts()
         {
 
-   return "I am fine with this networking for u";
+            var productsList=await Products.Products.ToListAsync();
+
+            return Ok(productsList);
 
         }
 
          [HttpGet("{id}")]
 
-        public string GetProducts(int id)
+        public async Task<ActionResult<Products>> GetProducts(int id)
         {
 
-   return "this is a product with id: "+id;
+            var product=await Products.Products.FindAsync(id);
+
+
+            return product;
 
         }
         
