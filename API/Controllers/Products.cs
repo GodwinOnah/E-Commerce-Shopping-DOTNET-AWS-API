@@ -7,7 +7,7 @@ namespace API.Controllers
 {
     public class Products
     {
-        public int proID { get; set; }
+        public int id { get; set; }
 
         public int prodName { get; set; }
     }
