@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using API.Controllers;
 using Microsoft.EntityFrameworkCore;
+using core.Controllers;
 
-namespace API.data
+namespace infrastructure.data
 {
     public class storeProducts : DbContext
     {

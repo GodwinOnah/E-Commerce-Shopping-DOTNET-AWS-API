@@ -72,3 +72,7 @@
 /Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll
 /Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/Mono.TextTemplating.dll
 /Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/System.CodeDom.dll
+/Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/core.dll
+/Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/infrastructure.dll
+/Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/core.pdb
+/Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/infrastructure.pdb

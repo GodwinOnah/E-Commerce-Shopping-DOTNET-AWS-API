@@ -9,9 +9,10 @@
       "API/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "7.0.0",
-          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.4",
-          "Swashbuckle.AspNetCore": "6.2.3"
+          "Swashbuckle.AspNetCore": "6.2.3",
+          "core": "1.0.0",
+          "infrastructure": "1.0.0"
         },
         "runtime": {
           "API.dll": {}
@@ -469,6 +470,20 @@
             "fileVersion": "7.0.22.51805"
           }
         }
+      },
+      "core/1.0.0": {
+        "runtime": {
+          "core.dll": {}
+        }
+      },
+      "infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.0",
+          "core": "1.0.0"
+        },
+        "runtime": {
+          "infrastructure.dll": {}
+        }
       }
     }
   },
@@ -729,6 +744,16 @@
       "sha512": "sha512-DaGSsVqKsn/ia6RG8frjwmJonfos0srquhw09TlT8KRw5I43E+4gs+/bZj4K0vShJ5H9imCuXupb4RmS+dBy3w==",
       "path": "system.text.json/7.0.0",
       "hashPath": "system.text.json.7.0.0.nupkg.sha512"
+    },
+    "core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

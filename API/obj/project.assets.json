@@ -669,6 +669,30 @@
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
+      },
+      "core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/core.dll": {}
+        }
+      },
+      "infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.0",
+          "core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/infrastructure.dll": {}
+        }
       }
     }
   },
@@ -1547,14 +1571,25 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "core/1.0.0": {
+      "type": "project",
+      "path": "../core/core.csproj",
+      "msbuildProject": "../core/core.csproj"
+    },
+    "infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../infrastructure/infrastructure.csproj",
+      "msbuildProject": "../infrastructure/infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore.Design >= 7.0.0",
-      "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.4",
-      "Swashbuckle.AspNetCore >= 6.2.3"
+      "Swashbuckle.AspNetCore >= 6.2.3",
+      "core >= 1.0.0",
+      "infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1581,7 +1616,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/godwinonah/Documents/bagshop/BagShop/core/core.csproj": {
+              "projectPath": "/Users/godwinonah/Documents/bagshop/BagShop/core/core.csproj"
+            },
+            "/Users/godwinonah/Documents/bagshop/BagShop/infrastructure/infrastructure.csproj": {
+              "projectPath": "/Users/godwinonah/Documents/bagshop/BagShop/infrastructure/infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1597,10 +1639,6 @@
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
-            "target": "Package",
-            "version": "[7.0.0, )"
-          },
-          "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",
             "version": "[7.0.0, )"
           },

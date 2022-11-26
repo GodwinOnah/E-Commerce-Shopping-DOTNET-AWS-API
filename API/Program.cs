@@ -1,4 +1,5 @@
-using API.data;
+using infrastructure;
+using infrastructure.data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,7 @@ builder.Services.AddDbContext<storeProducts>(
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IproductsInt,ProductRepo>();
 
 var app = builder.Build();
 
