@@ -14,5 +14,9 @@ namespace infrastructure.data
         }
 
         public DbSet<Products> Products { get; set; }
+
+        public DbSet<ProductBrand> ProductBrands { get; set; }
+
+        public DbSet<ProductType> ProductTypes { get; set; }
     }
 }
