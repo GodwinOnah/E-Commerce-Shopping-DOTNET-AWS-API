@@ -20,6 +20,7 @@ namespace infrastructure.data
 
         public DbSet<ProductType> ProductTypes { get; set; }
 
+        //This code creates configuration of our entities models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

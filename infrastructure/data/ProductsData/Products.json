@@ -1,0 +1,50 @@
+[
+  {
+    "Name": "Green Bag",
+    "Picture": "Downloads/greenHandbag.avif",
+    "Description": "This is a green bag for sale",
+    "Price": 23,
+    "Product Brand Id": 1,
+    "Product Type Id": 1
+  },
+  {
+    "Name": "Yellow Skin Bag",
+    "Picture": "Downloads/YellowishSiknHandbag.webp",
+    "Description": "This is a Yellow skin bag for sale",
+    "Price": 20,
+    "Product Brand Id": 2,
+    "Product Type Id": 2
+  },
+  {
+    "Name": "Brown Bag",
+    "Picture": "Downloads/brownHandbag.webp",
+    "Description": "This is a brown bag for sale",
+    "Price": 16,
+    "Product Brand Id": 2,
+    "Product Type Id": 3
+  },
+  {
+    "Name": "Red Bag",
+    "Picture": "Downloads/redHandbag.webp",
+    "Description": "This is a red bag for sale",
+    "Price": 45,
+    "Product Brand Id": 2,
+    "Product Type Id": 4
+  },
+  {
+    "Name": "Black Laptop Bag",
+    "Picture": "Downloads/blackLaptopbag.webp",
+    "Description": "This is a laptop bag for sale",
+    "Price": 33,
+    "Product Brand Id": 3,
+    "Product Type Id": 4
+  },
+  {
+    "Name": "Black Bag",
+    "Picture": "Downloads/blackHandBag.webp",
+    "Description": "This is a black bag for sale",
+    "Price": 37,
+    "Product Brand Id": 4,
+    "Product Type Id": 4
+  }
+]
