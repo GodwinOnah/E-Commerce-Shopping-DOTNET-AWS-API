@@ -42,10 +42,10 @@ namespace infrastructure.data.Migrations
                 {
                     productId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    prodName = table.Column<string>(type: "TEXT", nullable: true),
+                    prodName = table.Column<string>(type: "TEXT", maxLength: 15, nullable: false),
                     prodPicture = table.Column<string>(type: "TEXT", nullable: false),
-                    prodDescription = table.Column<string>(type: "TEXT", nullable: true),
-                    prodPrice = table.Column<int>(type: "INTEGER", nullable: false),
+                    prodDescription = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
+                    prodPrice = table.Column<int>(type: "decimal(10,2)", nullable: false),
                     productBrandId = table.Column<int>(type: "INTEGER", nullable: false),
                     productTypeId = table.Column<int>(type: "INTEGER", nullable: false)
                 },

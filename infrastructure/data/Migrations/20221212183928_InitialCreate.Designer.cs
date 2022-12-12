@@ -10,7 +10,7 @@ using infrastructure.data;
 namespace infrastructure.data.Migrations
 {
     [DbContext(typeof(storeProducts))]
-    [Migration("20221212174801_InitialCreate")]
+    [Migration("20221212183928_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -57,10 +57,12 @@ namespace infrastructure.data.Migrations
 
                     b.Property<string>("prodDescription")
                         .IsRequired()
+                        .HasMaxLength(200)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("prodName")
                         .IsRequired()
+                        .HasMaxLength(15)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("prodPicture")
@@ -68,7 +70,7 @@ namespace infrastructure.data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<int>("prodPrice")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("decimal(10,2)");
 
                     b.Property<int>("productBrandId")
                         .HasColumnType("INTEGER");

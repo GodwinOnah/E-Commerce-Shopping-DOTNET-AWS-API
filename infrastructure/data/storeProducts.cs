@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using core.Controllers;
+using System.Reflection;
 
 namespace infrastructure.data
 {
@@ -18,5 +19,13 @@ namespace infrastructure.data
         public DbSet<ProductBrand> ProductBrands { get; set; }
 
         public DbSet<ProductType> ProductTypes { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+        }
     }
 }
