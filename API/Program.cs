@@ -33,4 +33,27 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+//this code created database
+using (var scope=app.Services.CreateScope()){
+
+    var services=scope.ServiceProvider;
+
+    var loggerFactory=services.GetRequiredService<ILoggerFactory>();
+
+    try{
+
+        var context=services.GetRequiredService<storeProducts>();
+
+        await context.Database.MigrateAsync();
+    }
+
+    catch(Exception e){
+
+        var logger=loggerFactory.CreateLogger<Program>();
+
+        logger.LogError(e,"Migration error occured");
+    }
+
+}
+
 app.Run();
