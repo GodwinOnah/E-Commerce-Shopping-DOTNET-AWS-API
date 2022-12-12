@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FoSfO6XGo+94gIy56DHIOQY16pCKlQagm7gex9YfIXituHII8STFItlK6lyQ8oz7q+LTwGWqEMDf8T1DMVDqGg==",
+  "dgSpecHash": "cZoS5RiAfxitOqX/U10p5lKY+w7sG25GHkIMp3uuD0b3oROQ3avK1YDosCwYM6hWLb4RcOX0Nv2U9PYFZTfQbg==",
   "success": true,
   "projectFilePath": "/Users/godwinonah/Documents/bagshop/BagShop/API/API.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,7 @@
     "/Users/godwinonah/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.0/microsoft.entityframeworkcore.relational.7.0.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.entityframeworkcore.sqlite/7.0.0/microsoft.entityframeworkcore.sqlite.7.0.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.entityframeworkcore.sqlite.core/7.0.0/microsoft.entityframeworkcore.sqlite.core.7.0.0.nupkg.sha512",
-    "/Users/godwinonah/.nuget/packages/microsoft.entityframeworkcore.tools/6.0.4/microsoft.entityframeworkcore.tools.6.0.4.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/microsoft.entityframeworkcore.tools/7.0.0/microsoft.entityframeworkcore.tools.7.0.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
@@ -39,7 +39,10 @@
     "/Users/godwinonah/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
-    "/Users/godwinonah/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"
+    "/Users/godwinonah/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.11/microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.11/microsoft.netcore.app.host.osx-arm64.6.0.11.nupkg.sha512"
   ],
   "logs": []
 }

@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace API.Data.Migrations
+namespace infrastructure.data.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
@@ -16,7 +16,7 @@ namespace API.Data.Migrations
                 {
                     id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    prodName = table.Column<int>(type: "INTEGER", nullable: false)
+                    prodName = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {

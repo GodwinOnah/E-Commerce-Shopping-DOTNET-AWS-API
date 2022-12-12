@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using infrastructure.data;
 using System.Threading.Tasks;
-using API.data;
+using core.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,10 +14,10 @@ namespace API.Controllers
     [Route("[controller]")]
     public class ProdController: ControllerBase
     {
-        public storeProducts Products { get; }
-        public ProdController(storeProducts products)
+        private readonly ProductRepo _productsRep;
+        public ProdController(ProductRepo productsRep)
         {
-            this.Products = products;
+            _productsRep = productsRep;
         }
 
         [HttpGet]
@@ -24,7 +25,7 @@ namespace API.Controllers
         public async Task<ActionResult<List<Products>>> GetProducts()
         {
 
-            var productsList=await Products.Products.ToListAsync();
+            var productsList=await _productsRep.GetProductsAdsync();
 
             return Ok(productsList);
 
@@ -35,7 +36,7 @@ namespace API.Controllers
         public async Task<ActionResult<Products>> GetProducts(int id)
         {
 
-            var product=await Products.Products.FindAsync(id);
+            var product=await _productsRep.GetProductsByIDAdsync(id);
 
 
             return product;
