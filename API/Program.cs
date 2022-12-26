@@ -16,7 +16,7 @@ builder.Services.AddDbContext<storeProducts>(
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-//builder.Services.AddScoped<IProductInterface,ProductRepo>();
+builder.Services.AddScoped<IProductInterface,ProductRepo>();
 
 var app = builder.Build();
 
@@ -33,25 +33,26 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-//this code created database
+//this code creates database
 using (var scope=app.Services.CreateScope()){
 
     var services=scope.ServiceProvider;
 
     var loggerFactory=services.GetRequiredService<ILoggerFactory>();
+     var context=services.GetRequiredService<storeProducts>();
 
     try{
 
-        var context=services.GetRequiredService<storeProducts>();
-
         await context.Database.MigrateAsync();
+
+        await storeProductData.storeProductsAsync(context,loggerFactory);
     }
 
     catch(Exception e){
 
         var logger=loggerFactory.CreateLogger<Program>();
 
-        logger.LogError(e,"Migration error occured");
+        logger.LogError(e,"Migration error has occured");
     }
 
 }
