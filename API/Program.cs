@@ -27,11 +27,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
 
-app.UseAuthorization();
-
-app.MapControllers();
 
 //this code creates database
 using (var scope=app.Services.CreateScope()){
@@ -56,5 +52,11 @@ using (var scope=app.Services.CreateScope()){
     }
 
 }
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
 
 app.Run();

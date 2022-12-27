@@ -31,17 +31,42 @@ namespace API.Controllers
 
         }
 
-         [HttpGet("{id}")]
+         [HttpGet("{productId}")]
 
-        public async Task<ActionResult<Products>> GetProducts(int id)
+        public async Task<ActionResult<Products>> GetProducts(int productId)
         {
 
-            var product=await _productsRep.GetProductsByIDAdsync(id);
+            var product=await _productsRep.GetProductsByIDAdsync(productId);
 
 
             return product;
 
         }
+
+        [HttpGet("{brands}")]
+
+        public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetProductBrand()
+        {
+
+            var productBrandList=await _productsRep.GetProductBrandAdsync();
+
+            return Ok(productBrandList);
+
+        }
+
+        [HttpGet("{types}")]
+
+        public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductType()
+        {
+
+            var productTypeList=await _productsRep.GetProductTypeAdsync();
+
+            
+
+
+            return Ok(productTypeList);
+
+        }
         
-    }
-}
+    
+}}
