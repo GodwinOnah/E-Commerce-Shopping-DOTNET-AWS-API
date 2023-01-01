@@ -481,11 +481,6 @@
         }
       },
       "core/1.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "7.0.0",
-          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.0",
-          "Newtonsoft.Json": "13.0.2"
-        },
         "runtime": {
           "core.dll": {}
         }
@@ -493,7 +488,6 @@
       "infrastructure/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.0",
-          "Newtonsoft.Json": "13.0.2",
           "core": "1.0.0"
         },
         "runtime": {

@@ -1,13 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using infrastructure.data;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+
 using core.Entities;
-using infrastructure.data.ProductsData;
 using core.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
@@ -16,16 +10,20 @@ namespace API.Controllers
     [Route("[controller]")]
     public class ProdController: ControllerBase
     {
-        private readonly IgenericProductInterface<Products> _products;
-
+       
+    
+private readonly IgenericProductInterface<Products> _products;
         private readonly IgenericProductInterface<ProductBrand> _productBrands;
-        private readonly IgenericProductInterface<ProductType> _productTypes;
-        public ProdController(IgenericProductInterface<Products> products,IgenericProductInterface<ProductBrand> productBrands,IgenericProductInterface<ProductType> productTypes)
+
+         private readonly IgenericProductInterface<ProductType> _productTypes;
         
+        public ProdController(IgenericProductInterface<Products> products,
+                                IgenericProductInterface<ProductBrand> productBrands,
+                                IgenericProductInterface<ProductType> productTypes)
         {
-            _products = products;
-             _productBrands = productBrands;
             _productTypes = productTypes;
+            _productBrands = productBrands;
+            _products = products;
         }
 
         [HttpGet]
@@ -65,12 +63,11 @@ namespace API.Controllers
 
             var productTypeList=await _productTypes.ListAllAsync();
 
-            
-
-
-            return Ok(productTypeList);
+             return Ok(productTypeList);
 
         }
         
     
-}}
+}
+
+}

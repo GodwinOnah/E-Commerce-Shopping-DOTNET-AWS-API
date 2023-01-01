@@ -1,5 +1,4 @@
 /Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/appsettings.Development.json
-/Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/appsettings.json
 /Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/API
 /Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/API.deps.json
 /Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/API.runtimeconfig.json

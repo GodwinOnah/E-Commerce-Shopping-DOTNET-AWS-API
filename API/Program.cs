@@ -13,15 +13,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddDbContext<storeProducts>(
  x=>x.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
- builder.Services.AddScoped<IProductInterface,ProductRepo>();
+ //builder.Services.AddScoped<IProductInterface,ProductRepo>();
  builder.Services.AddScoped(typeof(IgenericProductInterface<>),(typeof(ProductGeneric<>)));
-//builder.Services.AddDbContext<DbContext>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
 var app = builder.Build();
+
+//this code creates the database
 
 using (var scope=app.Services.CreateScope()){
 
@@ -57,11 +58,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseRouting();
+
 app.UseAuthorization();
 
 app.MapControllers();
 
-//this code creates database
 
 
 
