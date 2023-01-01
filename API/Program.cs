@@ -1,4 +1,5 @@
 
+using API.AutoMapper;
 using core.Interfaces;
 using infrastructure.data;
 using infrastructure.data.ProductsData;
@@ -18,6 +19,7 @@ builder.Services.AddDbContext<storeProducts>(
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(typeof(MappingProductProfile));
 
 
 var app = builder.Build();

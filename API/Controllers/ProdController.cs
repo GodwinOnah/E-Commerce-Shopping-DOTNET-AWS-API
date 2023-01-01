@@ -1,5 +1,6 @@
 
 using API.DTOs;
+using AutoMapper;
 using core.Entities;
 using core.Interfaces;
 using core.Specifications;
@@ -16,14 +17,18 @@ namespace API.Controllers
         private readonly IgenericProductInterface<ProductBrand> _productBrands;
 
          private readonly IgenericProductInterface<ProductType> _productTypes;
+
+         private readonly IMapper _imapper;
         
         public ProductsController(IgenericProductInterface<Products> products,
                                 IgenericProductInterface<ProductBrand> productBrands,
-                                IgenericProductInterface<ProductType> productTypes)
+                                IgenericProductInterface<ProductType> productTypes,
+                                IMapper imapper)
         {
             _productTypes = productTypes;
             _productBrands = productBrands;
             _products = products;
+           _imapper = imapper;
         }
 
         [HttpGet]
@@ -53,17 +58,7 @@ namespace API.Controllers
         {
             var specification=new GetProductsWithBrandAndType(productId);
             var product=await _products.GetProductsWithSpecification(specification);
-            return new ProductsShapedObject
-            {
-                prodId=product.productId,
-                prodName=product.prodName,
-                prodDescription=product.prodDescription,
-                prodPrice=product.prodPrice,
-                prodPicture=product.prodPicture,
-                productBrand=product.productBrand.Name,
-                productType=product.productType.Name
-
-            };
+            return _imapper.Map<Products,ProductsShapedObject>(product);
 
         }
 
