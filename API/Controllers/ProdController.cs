@@ -1,6 +1,7 @@
 
 using core.Entities;
 using core.Interfaces;
+using core.Specifications;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -27,14 +28,14 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Products>>> GetProducts()
         {
-
-            var productsList=await _products.ListAllAsync();
+            var specification=new GetProductsWithBrandAndType();
+            var productsList=await _products.ListAllAsync(specification);
 
             return Ok(productsList);
 
         }
 
-        [HttpGet("{productId}")]
+        [HttpGet("{productId}")]// Notice the curly braces
         public async Task<ActionResult<Products>> GetProducts(int productId)
         {
 
@@ -45,7 +46,7 @@ namespace API.Controllers
 
         }
 
-        [HttpGet("brands")]
+        [HttpGet("brands")] //No curly braces
         public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetProductBrand()
         {
 
@@ -55,7 +56,7 @@ namespace API.Controllers
 
         }
 
-        [HttpGet("types")]
+        [HttpGet("types")] //No curly braces
         public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductType()
         {
 
