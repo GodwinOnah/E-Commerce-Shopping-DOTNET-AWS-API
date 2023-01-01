@@ -8,16 +8,14 @@ namespace API.Controllers
 
     [ApiController]
     [Route("[controller]")]
-    public class ProdController: ControllerBase
+    public class ProductsController: ControllerBase
     {
-       
-    
-private readonly IgenericProductInterface<Products> _products;
+        private readonly IgenericProductInterface<Products> _products;
         private readonly IgenericProductInterface<ProductBrand> _productBrands;
 
          private readonly IgenericProductInterface<ProductType> _productTypes;
         
-        public ProdController(IgenericProductInterface<Products> products,
+        public ProductsController(IgenericProductInterface<Products> products,
                                 IgenericProductInterface<ProductBrand> productBrands,
                                 IgenericProductInterface<ProductType> productTypes)
         {
@@ -36,7 +34,7 @@ private readonly IgenericProductInterface<Products> _products;
 
         }
 
-         [HttpGet("{productId}")]
+        [HttpGet("{productId}")]
         public async Task<ActionResult<Products>> GetProducts(int productId)
         {
 
@@ -47,7 +45,7 @@ private readonly IgenericProductInterface<Products> _products;
 
         }
 
-        [HttpGet("{brands}")]
+        [HttpGet("brands")]
         public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetProductBrand()
         {
 
@@ -57,7 +55,7 @@ private readonly IgenericProductInterface<Products> _products;
 
         }
 
-        [HttpGet("{types}")]
+        [HttpGet("types")]
         public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductType()
         {
 
