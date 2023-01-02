@@ -7,7 +7,7 @@ namespace API.DTOs
 {
     public class ProductsShapedObject
     {
-        public int prodId { get; set; }
+        public int productId { get; set; }
         public String prodName { get; set; }
 
         public String prodDescription { get; set; }

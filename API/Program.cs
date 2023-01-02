@@ -1,4 +1,5 @@
 
+
 using API.AutoMapper;
 using core.Interfaces;
 using infrastructure.data;
@@ -13,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<storeProducts>(
- x=>x.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+                x=>x.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
  //builder.Services.AddScoped<IProductInterface,ProductRepo>();
  builder.Services.AddScoped(typeof(IgenericProductInterface<>),(typeof(ProductGeneric<>)));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -61,6 +62,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseRouting();
+
+app.UseStaticFiles();
 
 app.UseAuthorization();
 

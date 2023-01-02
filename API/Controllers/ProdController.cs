@@ -32,24 +32,13 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<ProductsShapedObject>>> GetProducts()
+        public async Task<ActionResult<List<ProductsShapedObject>>> GetProducts(string? sort)
         {
-            var specification=new GetProductsWithBrandAndType();
+            var specification=new GetProductsWithBrandAndType(sort);
+
             var productsList=await _products.ListAllAsync(specification);
 
-            return productsList.Select(product=>new ProductsShapedObject
-            {
-                prodId=product.productId,
-                prodName=product.prodName,
-                prodDescription=product.prodDescription,
-                prodPrice=product.prodPrice,
-                prodPicture=product.prodPicture,
-                productBrand=product.productBrand.Name,
-                productType=product.productType.Name
-
-            }).ToList();
-        
-            
+            return Ok(_imapper.Map<IReadOnlyList<Products>,IReadOnlyList<ProductsShapedObject>>(productsList));
 
         }
 
