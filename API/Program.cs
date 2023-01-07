@@ -21,6 +21,12 @@ builder.Services.AddDbContext<storeProducts>(
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(MappingProductProfile));
+builder.Services.AddCors(option=>
+                    {option.AddPolicy("CorsPolity",
+                        policy=>
+                        {policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https//localhost:5000");
+                                });
+                            });
 
 
 var app = builder.Build();
