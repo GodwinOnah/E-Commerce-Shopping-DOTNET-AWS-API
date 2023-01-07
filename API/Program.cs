@@ -22,7 +22,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(MappingProductProfile));
 builder.Services.AddCors(option=>
-                    {option.AddPolicy("CorsPolity",
+                    {option.AddPolicy("CorsPolicy",
                         policy=>
                         {policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https//localhost:5000");
                                 });
@@ -70,6 +70,8 @@ app.UseHttpsRedirection();
 app.UseRouting();
 
 app.UseStaticFiles();
+
+app.UseCors("CorsPolicy");
 
 app.UseAuthorization();
 
