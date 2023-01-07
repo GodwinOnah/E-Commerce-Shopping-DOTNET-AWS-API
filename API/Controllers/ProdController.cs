@@ -33,16 +33,23 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<ProductsShapedObject>>> GetProducts(
+        public async Task<ActionResult<ProductsPagination<ProductsShapedObject>>> GetProducts(
             [FromQuery]ProductParameters parameters)//The [FromQuery] help the controller trace the parameter from the object passed
 
         {
-            var specification=new GetProductsWithBrandAndType(parameters);
+             var countPageSpecification= new ProductSpecificationWithFilter(parameters);
 
-            var productsList=await _products.ListAllAsync(specification);
+             var totalProducts= await _products.CountPage(countPageSpecification);
 
-            return Ok(_imapper.Map<IReadOnlyList<Products>,
-            IReadOnlyList<ProductsShapedObject>>(productsList));
+             var specification= new GetProductsWithBrandAndType(parameters);
+
+             var productsList= await _products.ListAllAsync(specification);
+
+             var data= _imapper.Map<IReadOnlyList<Products>,
+             IReadOnlyList<ProductsShapedObject>>(productsList);
+
+             return Ok(new ProductsPagination<ProductsShapedObject>
+             (parameters.pageIndex,parameters.PageSize,totalProducts,data));
 
         }
 
