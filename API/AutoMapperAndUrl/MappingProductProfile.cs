@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using API.AutoMapperAndUrl;
 using API.DTOs;
 using AutoMapper;
+using core.Controllers;
 using core.Entities;
 
 namespace API.AutoMapper

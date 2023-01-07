@@ -1,6 +1,7 @@
 
 using API.DTOs;
 using AutoMapper;
+using core.Controllers;
 using core.Entities;
 using core.Interfaces;
 using core.Specifications;
@@ -32,13 +33,16 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<ProductsShapedObject>>> GetProducts(string? sort)
+        public async Task<ActionResult<List<ProductsShapedObject>>> GetProducts(
+            [FromQuery]ProductParameters parameters)//The [FromQuery] help the controller trace the parameter from the object passed
+
         {
-            var specification=new GetProductsWithBrandAndType(sort);
+            var specification=new GetProductsWithBrandAndType(parameters);
 
             var productsList=await _products.ListAllAsync(specification);
 
-            return Ok(_imapper.Map<IReadOnlyList<Products>,IReadOnlyList<ProductsShapedObject>>(productsList));
+            return Ok(_imapper.Map<IReadOnlyList<Products>,
+            IReadOnlyList<ProductsShapedObject>>(productsList));
 
         }
 
