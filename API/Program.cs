@@ -21,12 +21,19 @@ builder.Services.AddDbContext<storeProducts>(
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(MappingProductProfile));
+// builder.Services.AddCors(option=>
+//                     {option.AddPolicy("CorsPolicy",
+//                         policy=>
+//                         {policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200");
+//                                 });
+//                             });
+
 builder.Services.AddCors(option=>
-                    {option.AddPolicy("CorsPolicy",
+                    option.AddPolicy("AllowAccess_To_API",
                         policy=>
-                        {policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https//localhost:5000");
-                                });
-                            });
+                        policy.AllowAnyHeader().AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:4200")
+));
+
 
 
 var app = builder.Build();
@@ -55,7 +62,7 @@ using (var scope=app.Services.CreateScope()){
     }
 
 }
-
+app.UseCors("AllowAccess_To_API");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -71,7 +78,9 @@ app.UseRouting();
 
 app.UseStaticFiles();
 
-app.UseCors("CorsPolicy");
+// app.UseCors("CorsPolicy");
+
+
 
 app.UseAuthorization();
 
