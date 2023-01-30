@@ -86,3 +86,5 @@
 /Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/API.staticwebassets.runtime.json
 /Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/Pipelines.Sockets.Unofficial.dll
 /Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/StackExchange.Redis.dll
+/Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/package-lock.json
+/Users/godwinonah/Documents/bagshop/BagShop/API/bin/Debug/net6.0/package.json

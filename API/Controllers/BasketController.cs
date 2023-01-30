@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using core;
 using core.Interfaces;
@@ -9,9 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers
 {
 
-    [ApiController]
-    [Route("[controller]")]
-    public class BasketController :ControllerBase
+   
+    public class BasketController :ApiControllerBase
     { 
         private readonly IBasket _basket;
         public BasketController(IBasket basket){
@@ -19,22 +19,30 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<Basket>> GetBasketById(string Id){
+        public async Task<ActionResult<Basket>> GetBasketById(string id){
 
-            var basket= await _basket.GetBasketAsync(Id);
-            return Ok(basket??new Basket(Id));
+            var basket= await _basket.GetBasketAsync(id);
+            
+            return Ok(basket ?? new Basket(id));
 
         }
 
         [HttpPost]
         public async Task<ActionResult<Basket>> UpdateBasket(Basket basket)
-        {
-           var update= await  _basket.UpdateBasketAsync(basket);
+        { 
+
+            // Console.WriteLine(basket);
+           
+           var update = await  _basket.UpdateBasketAsync(basket);
+
+        //    var val=JsonSerializer.Serialize(update);
+            
+        //    Console.WriteLine(val );
             return Ok(update);
 
         }
 
-          [HttpDelete]
+        [HttpDelete]
         public async Task DeleteBasket(string id)
         {
           await  _basket.DeleteBasketAsync(id);

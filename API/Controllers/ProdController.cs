@@ -1,5 +1,6 @@
 
 using API.DTOs;
+using API.ErrorsHandlers;
 using AutoMapper;
 using core.Controllers;
 using core.Entities;
@@ -10,9 +11,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers
 {
 
-    [ApiController]
-    [Route("[controller]")]
-    public class ProductsController: ControllerBase
+   
+    public class ProductsController: ApiControllerBase
     {
         private readonly IgenericProductInterface<Products> _products;
         private readonly IgenericProductInterface<ProductBrand> _productBrands;
@@ -37,29 +37,31 @@ namespace API.Controllers
             [FromQuery]ProductParameters parameters)//The [FromQuery] help the controller trace the parameter from the object passed
 
         {
-             var countPageSpecification= new ProductSpecificationWithFilter(parameters);
+             var countPageSpecification = new ProductSpecificationWithFilter(parameters);
 
-             var totalProducts= await _products.CountPage(countPageSpecification);
+             var totalProducts = await _products.CountPage(countPageSpecification);
 
-             var specification= new GetProductsWithBrandAndType(parameters);
+             var specification = new GetProductsWithBrandAndType(parameters);
 
-             var productsList= await _products.ListAllAsync(specification);
+             var productsList = await _products.ListAllAsync(specification);
 
              var data= _imapper.Map<IReadOnlyList<Products>,
-             IReadOnlyList<ProductsShapedObject>>(productsList);
+                             IReadOnlyList<ProductsShapedObject>>(productsList);
 
              return Ok(new ProductsPagination<ProductsShapedObject>
-             (parameters.pageIndex,parameters.PageSize,totalProducts,data));
+                (parameters.pageIndex,parameters.PageSize,totalProducts,data));
 
         }
 
         [HttpGet("{productId}")]// Notice the curly braces
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Responses),StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ProductsShapedObject>> GetProducts(int productId)
         {
-            var specification=new GetProductsWithBrandAndType(productId);
-            var product=await _products.GetProductsWithSpecification(specification);
+            var specification = new GetProductsWithBrandAndType(productId);
+            var product = await _products.GetProductsWithSpecification(specification);
+            if(product==null) return NotFound(new Responses(400));
             return _imapper.Map<Products,ProductsShapedObject>(product);
-
         }
 
         [HttpGet("brands")] //No curly braces
@@ -76,7 +78,7 @@ namespace API.Controllers
         public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductType()
         {
 
-            var productTypeList=await _productTypes.ListAllAsync();
+            var productTypeList = await _productTypes.ListAllAsync();
 
              return Ok(productTypeList);
 

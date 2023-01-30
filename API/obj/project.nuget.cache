@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9RvkWJuk1DjaSogWeHFNg7M+xr08uRI3c6u+rMzYmu/JvOfoBM8aXEzBAgTVgyiF/CYr8IcAMyMs8BKB0Fh6Fg==",
+  "dgSpecHash": "lRwGbM1YIUTwFBnHBapEJpPK3Hop2Tm6yfUCm8MjndbXIyCrJy2wCGziOeXnrmi7MBTQeH3BfCLVRjGS1XkEmg==",
   "success": true,
   "projectFilePath": "/Users/godwinonah/Documents/bagshop/BagShop/API/API.csproj",
   "expectedPackageFiles": [
@@ -46,7 +46,7 @@
     "/Users/godwinonah/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
-    "/Users/godwinonah/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.text.json/7.0.1/system.text.json.7.0.1.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.11/microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.11/microsoft.netcore.app.host.osx-arm64.6.0.11.nupkg.sha512"

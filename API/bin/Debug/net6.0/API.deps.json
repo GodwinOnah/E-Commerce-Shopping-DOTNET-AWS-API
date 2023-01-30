@@ -14,6 +14,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "7.0.0",
           "Newtonsoft.Json": "13.0.2",
           "Swashbuckle.AspNetCore": "6.2.3",
+          "System.Text.Json": "7.0.1",
           "infrastructure": "1.0.0"
         },
         "runtime": {
@@ -197,7 +198,7 @@
       "Microsoft.Extensions.DependencyModel/7.0.0": {
         "dependencies": {
           "System.Text.Encodings.Web": "7.0.0",
-          "System.Text.Json": "7.0.0"
+          "System.Text.Json": "7.0.1"
         },
         "runtime": {
           "lib/net6.0/Microsoft.Extensions.DependencyModel.dll": {
@@ -516,7 +517,7 @@
           }
         }
       },
-      "System.Text.Json/7.0.0": {
+      "System.Text.Json/7.0.1": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
           "System.Text.Encodings.Web": "7.0.0"
@@ -524,14 +525,16 @@
         "runtime": {
           "lib/net6.0/System.Text.Json.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.22.51805"
+            "fileVersion": "7.0.122.56804"
           }
         }
       },
       "core/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.0",
-          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.0"
+          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.0",
+          "Newtonsoft.Json": "13.0.2",
+          "System.Text.Json": "7.0.1"
         },
         "runtime": {
           "core.dll": {}
@@ -540,7 +543,9 @@
       "infrastructure/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.0",
+          "Newtonsoft.Json": "13.0.2",
           "StackExchange.Redis": "2.6.90",
+          "System.Text.Json": "7.0.1",
           "core": "1.0.0"
         },
         "runtime": {
@@ -849,12 +854,12 @@
       "path": "system.text.encodings.web/7.0.0",
       "hashPath": "system.text.encodings.web.7.0.0.nupkg.sha512"
     },
-    "System.Text.Json/7.0.0": {
+    "System.Text.Json/7.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-DaGSsVqKsn/ia6RG8frjwmJonfos0srquhw09TlT8KRw5I43E+4gs+/bZj4K0vShJ5H9imCuXupb4RmS+dBy3w==",
-      "path": "system.text.json/7.0.0",
-      "hashPath": "system.text.json.7.0.0.nupkg.sha512"
+      "sha512": "sha512-OtDEmCCiNl8JAduFKZ/r0Sw6XZNHwIicUYy/mXgMDGeOsZLshH37qi3oPRzFYiryVktiMoQLByMGPtRCEMYbeQ==",
+      "path": "system.text.json/7.0.1",
+      "hashPath": "system.text.json.7.0.1.nupkg.sha512"
     },
     "core/1.0.0": {
       "type": "project",

@@ -1,10 +1,14 @@
 
 
+using API.ApiErrorMiddleWares;
 using API.AutoMapper;
+using API.ErrorsHandlers;
 using core.Interfaces;
 using infrastructure.data;
 using infrastructure.data.ProductsData;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,11 +19,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<storeProducts>(
-                x=>x.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+                x=>x.UseSqlite(builder.Configuration
+                .GetConnectionString("DefaultConnection")));
+
 builder.Services.AddSingleton<IConnectionMultiplexer>(c => {
-                var configuration =ConfigurationOptions.Parse(builder.Configuration.GetConnectionString("Redis"),true);
+                var configuration = ConfigurationOptions
+                .Parse(builder.Configuration.GetConnectionString("Redis"),true);
                 return ConnectionMultiplexer.Connect(configuration);
                 });
+
 builder.Services.AddScoped<IBasket,BasketRepo>();
  //builder.Services.AddScoped<IProductInterface,ProductRepo>();
  builder.Services.AddScoped(typeof(IgenericProductInterface<>),(typeof(ProductGeneric<>)));
@@ -37,10 +45,28 @@ builder.Services.AddAutoMapper(typeof(MappingProductProfile));
 builder.Services.AddCors(option=>
                     option.AddPolicy("AllowAccess_To_API",
                         policy=>
-                        policy.AllowAnyHeader().AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:4200")
+                        policy.AllowAnyHeader().AllowAnyMethod()
+                        .AllowAnyHeader().WithOrigins("http://localhost:4200")
 ));
 
+builder.Services.Configure<ApiBehaviorOptions>(option =>
+        option.InvalidModelStateResponseFactory = actionContext => {
 
+        var errors = actionContext.ModelState
+        .Where(e => e.Value.Errors.Count > 0)
+        .SelectMany(k => k.Value.Errors)
+        .Select(i => i.ErrorMessage)
+        .ToArray();
+
+
+
+    var errorResponese = new ValidationErrors{
+
+        Errors = errors
+    };
+
+    return new BadRequestObjectResult(errorResponese);
+});
 
 var app = builder.Build();
 
@@ -60,27 +86,24 @@ using (var scope=app.Services.CreateScope()){
         await storeProductData.storeProductsAsync(context,loggerFactory);
     }
 
-    catch(Exception e){
-
+catch(Exception e){
         var logger=loggerFactory.CreateLogger<Program>();
-
         logger.LogError(e,"Migration error has occured");
     }
 
 }
-app.UseCors("AllowAccess_To_API");
+app.UseCors("AllowAccess_To_API");//cors
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseMiddleware<ErrorMiddleWare>(); //the cusomized middleware
 
+app.UseSwagger();//available for both production and development mode
+app.UseSwaggerUI();//available for both production and development mode
+
+app.UseStatusCodePagesWithReExecute("/error/{0}");//use for redirecting error not handle by Error controllers
 
 app.UseHttpsRedirection();
 
-app.UseRouting();
+app.UseRouting();//for routing
 
 app.UseStaticFiles();
 
