@@ -46,7 +46,7 @@ builder.Services.AddCors(option=>
                     option.AddPolicy("AllowAccess_To_API",
                         policy=>
                         policy.AllowAnyHeader().AllowAnyMethod()
-                        .AllowAnyHeader().WithOrigins("http://localhost:4200")
+                        .AllowCredentials().WithOrigins("http://localhost:4200").WithOrigins("http://localhost:7135/basket")
 ));
 
 builder.Services.Configure<ApiBehaviorOptions>(option =>

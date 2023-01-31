@@ -31,17 +31,19 @@ namespace API.ApiErrorMiddleWares
 
                        _iloger.LogError(e, e.Message);
 
-                       httpContext.Response.ContentType="application/json";
+                       httpContext.Response.ContentType = "application/json";
 
-                       httpContext.Response.StatusCode=(int)HttpStatusCode.InternalServerError;
+                       httpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
-                       var response = _env.IsDevelopment()?new ApiErrorExceptions(
-                        (int)HttpStatusCode.InternalServerError, e.Message, 
-                        e.StackTrace.ToString()): new ApiErrorExceptions( (int)HttpStatusCode.InternalServerError);
+                       var response = _env.IsDevelopment() ? new ApiErrorExceptions(
+                                    (int)HttpStatusCode.InternalServerError, e.Message, 
+                                                 e.StackTrace.ToString()): 
+                                                 new ApiErrorExceptions(
+                                                    (int)HttpStatusCode.InternalServerError);
 
-                        var options=new JsonSerializerOptions{PropertyNamingPolicy=
-                        JsonNamingPolicy.CamelCase};
-                        
+                        var options = new JsonSerializerOptions{PropertyNamingPolicy =
+                                     JsonNamingPolicy.CamelCase};
+
                         var json = JsonSerializer.Serialize(response,options);
 
                         await httpContext.Response.WriteAsync(json);
