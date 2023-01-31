@@ -32,11 +32,7 @@ namespace API.Controllers
         { 
 
             Console.WriteLine(basket.Items);
-           var update = await  _basket.UpdateBasketAsync(basket);
-
-        //    var val=JsonSerializer.Serialize(update);
-            
-        //    Console.WriteLine(val );
+            var update = await  _basket.UpdateBasketAsync(basket);
             return Ok(update);
 
         }
