@@ -16,9 +16,9 @@ namespace infrastructure.data
 
         public DbSet<Products> Products { get; set; }
 
-        public DbSet<ProductBrand> ProductBrands { get; set; }
+        public DbSet<ProductBrand> ProductBrand { get; set; }
 
-        public DbSet<ProductType> ProductTypes { get; set; }
+        public DbSet<ProductType> ProductType { get; set; }
 
         //This code creates configuration of our entities models
         protected override void OnModelCreating(ModelBuilder modelBuilder)

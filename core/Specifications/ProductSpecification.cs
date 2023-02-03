@@ -15,7 +15,10 @@ namespace infrastructure.data
 
         public Expression<Func<T, object>> OrderByDescending {get; private set;}
 
-        public ProductSpecification(){} //Parameterless constructor
+        public ProductSpecification()//Parameterless constructor
+        {
+            
+        } 
 
         public ProductSpecification(Expression<Func<T, bool>> productCriteria)//parameterized constructor
         {
@@ -25,8 +28,12 @@ namespace infrastructure.data
         public List<Expression<Func<T, object>>> productIncludes  {get;}= 
         new List<Expression<Func<T, object>>>();//Include List
 
-        
-    
+        public int Skip {get; private set;}
+
+        public bool IsPageEnables {get; private set;}
+
+        public int Take {get; private set;}
+
         protected void AddProdInclude(Expression<Func<T, object>> includes)
         {
                 productIncludes.Add(includes);
@@ -40,6 +47,13 @@ namespace infrastructure.data
         protected void AddOrderByDescending(Expression<Func<T, object>> OrderByDescendingExp)
         {
                 OrderByDescending = OrderByDescendingExp;
+        }
+
+         protected void ApplyPagging(int skip, int take )
+        {          
+                Skip=skip;
+                Take=take;
+                IsPageEnables =true;
         }
 
         

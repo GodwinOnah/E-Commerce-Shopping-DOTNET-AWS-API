@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using core.Controllers;
 using core.Entities;
 using infrastructure.data;
 
@@ -10,15 +11,21 @@ namespace core.Specifications
 {
     public class GetProductsWithBrandAndType : ProductSpecification<Products>
     {
-        public GetProductsWithBrandAndType(string sort)
+        public GetProductsWithBrandAndType(ProductParameters parameters):
+        base(x=>
+                (string.IsNullOrEmpty(parameters.Search)||x.prodName.ToLower().Contains(parameters.Search))&&
+                (!parameters.brandId.HasValue||x.productBrandId==parameters.brandId)&&
+                (!parameters.typeId.HasValue||x.productTypeId==parameters.typeId)/*Filtering into a list by brand or type id*/)
         {
             AddProdInclude(x=>x.productBrand);
             AddProdInclude(x=>x.productType);
-            AddOrderBy(x=>x.prodName);  
+            AddOrderBy(x=>x.prodName);  //default order by product name
+            ApplyPagging(parameters.PageSize*(parameters.pageIndex-1),parameters.PageSize);
+            
 
-            if(!string.IsNullOrEmpty(sort))
+            if(!string.IsNullOrEmpty(parameters.sort))
             {
-                switch(sort)
+                switch(parameters.sort)//this code sorts the price in a particular order
                 {
 
                     case "priceIncrease":
@@ -40,7 +47,7 @@ namespace core.Specifications
         }
 
         public GetProductsWithBrandAndType(int id) :
-         base(x=>x.productId==id)
+         base(x=>x.productId==id/*Filtering into a single product*/)
         {
             AddProdInclude(x=>x.productBrand);
             AddProdInclude(x=>x.productType);  

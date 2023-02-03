@@ -14,5 +14,12 @@ namespace core.Interfaces
         Expression<Func<T, object>> OrderBy {get;}
 
         Expression<Func<T, object>> OrderByDescending {get;}
+
+        int Skip {get;}
+
+         bool IsPageEnables {get;}
+
+          int Take {get;}
+
     }
 }

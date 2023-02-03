@@ -1,6 +1,7 @@
 
 
 using API.ApiErrorMiddleWares;
+using API.ApiExtensions;
 using API.AutoMapper;
 using API.ErrorsHandlers;
 using core.Interfaces;
@@ -27,6 +28,8 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(c => {
                 .Parse(builder.Configuration.GetConnectionString("Redis"),true);
                 return ConnectionMultiplexer.Connect(configuration);
                 });
+
+builder.Services.AddIdentityService(builder.Configuration);
 
 builder.Services.AddScoped<IBasket,BasketRepo>();
  //builder.Services.AddScoped<IProductInterface,ProductRepo>();

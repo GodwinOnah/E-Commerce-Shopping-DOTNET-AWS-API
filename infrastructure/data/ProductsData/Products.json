@@ -1,50 +1,99 @@
 [
   {
-    "Name": "Green Bag",
-    "Picture": "Downloads/greenHandbag.avif",
-    "Description": "This is a green bag for sale",
-    "Price": 23,
-    "Product Brand Id": 1,
-    "Product Type Id": 1
+    "prodName": "Gucci Skin Bag",
+    "prodPicture": "/bags/greenHandbag.webp",
+    "prodDescription": "This is a green bag for sale",
+    "prodPrice": 23,
+    "productBrandId": 1,
+    "productTypeId": 1
   },
   {
-    "Name": "Yellow Skin Bag",
-    "Picture": "Downloads/YellowishSiknHandbag.webp",
-    "Description": "This is a Yellow skin bag for sale",
-    "Price": 20,
-    "Product Brand Id": 2,
-    "Product Type Id": 2
+    "prodName": "Nike Skin Bag",
+    "prodPicture": "/bags/YellowishSiknHandbag.webp",
+    "prodDescription": "This is a Yellow skin bag for sale",
+    "prodPrice": 20,
+    "productBrandId": 1,
+    "productTypeId": 2
   },
   {
-    "Name": "Brown Bag",
-    "Picture": "Downloads/brownHandbag.webp",
-    "Description": "This is a brown bag for sale",
-    "Price": 16,
-    "Product Brand Id": 2,
-    "Product Type Id": 3
+    "prodName": "Visca leather Bag",
+    "prodPicture": "/bags/brownHandbag.webp",
+    "prodDescription": "This is a brown bag for sale",
+    "prodPrice": 16,
+    "productBrandId": 2,
+    "productTypeId": 4
   },
   {
-    "Name": "Red Bag",
-    "Picture": "Downloads/redHandbag.webp",
-    "Description": "This is a red bag for sale",
-    "Price": 45,
-    "Product Brand Id": 2,
-    "Product Type Id": 4
+    "prodName": "Prada plain Bag",
+    "prodPicture": "/bags/redHandbag.webp",
+    "prodDescription": "This is a red bag for sale",
+    "prodPrice": 45,
+    "productBrandId": 3,
+    "productTypeId": 3
   },
   {
-    "Name": "Black Laptop Bag",
-    "Picture": "Downloads/blackLaptopbag.webp",
-    "Description": "This is a laptop bag for sale",
-    "Price": 33,
-    "Product Brand Id": 3,
-    "Product Type Id": 4
+    "prodName": "Visca Cotton Bag",
+    "prodPicture": "/bags/blackLaptopbag.webp",
+    "prodDescription": "This is a laptop bag for sale",
+    "prodPrice": 33,
+    "productBrandId": 4,
+    "productTypeId": 4
   },
   {
-    "Name": "Black Bag",
-    "Picture": "Downloads/blackHandBag.webp",
-    "Description": "This is a black bag for sale",
-    "Price": 37,
-    "Product Brand Id": 4,
-    "Product Type Id": 4
+    "prodName": "Nike plain Bag",
+    "prodPicture": "/bags/blackHandBag.webp",
+    "prodDescription": "This is a black bag for sale",
+    "prodPrice": 37,
+    "productBrandId": 3,
+    "productTypeId": 2
+  },
+  {
+    "prodName": "Gucci Leather Bag",
+    "prodPicture": "/bags/greenHandbag.webp",
+    "prodDescription": "This is a green bag for sale",
+    "prodPrice": 23,
+    "productBrandId": 2,
+    "productTypeId": 1
+  },
+  {
+    "prodName": "Prada Skin Bag",
+    "prodPicture": "/bags/YellowishSiknHandbag.webp",
+    "prodDescription": "This is a Yellow skin bag for sale",
+    "prodPrice": 20,
+    "productBrandId": 1,
+    "productTypeId": 3
+  },
+  {
+    "prodName": "Nike Cotton Bag",
+    "prodPicture": "/bags/brownHandbag.webp",
+    "prodDescription": "This is a brown bag for sale",
+    "prodPrice": 16,
+    "productBrandId": 4,
+    "productTypeId": 2
+  },
+  {
+    "prodName": "Visca Cotton Bag",
+    "prodPicture": "/bags/redHandbag.webp",
+    "prodDescription": "This is a red bag for sale",
+    "prodPrice": 45,
+    "productBrandId": 4,
+    "productTypeId": 4
+  },
+  {
+    "prodName": "Gucci Plain Bag",
+    "prodPicture": "/bags/blackLaptopbag.webp",
+    "prodDescription": "This is a laptop bag for sale",
+    "prodPrice": 33,
+    "productBrandId": 3,
+    "productTypeId": 1
+  },
+  {
+    "prodName": "Visca Leather Bag",
+    "prodPicture": "/bags/blackHandBag.webp",
+    "prodDescription": "This is a black bag for sale",
+    "prodPrice": 37,
+    "productBrandId": 2,
+    "productTypeId": 4
   }
+
 ]

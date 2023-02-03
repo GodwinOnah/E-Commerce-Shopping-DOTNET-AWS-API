@@ -22,13 +22,12 @@ namespace infrastructure.data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("prodName")
-                        .IsRequired()
+                    b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
                     b.HasKey("productId");
 
-                    b.ToTable("ProductBrands");
+                    b.ToTable("ProductBrand");
                 });
 
             modelBuilder.Entity("core.Controllers.ProductType", b =>
@@ -37,13 +36,12 @@ namespace infrastructure.data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("prodName")
-                        .IsRequired()
+                    b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
                     b.HasKey("productId");
 
-                    b.ToTable("ProductTypes");
+                    b.ToTable("ProductType");
                 });
 
             modelBuilder.Entity("core.Controllers.Products", b =>
@@ -66,7 +64,7 @@ namespace infrastructure.data.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("prodPrice")
+                    b.Property<decimal>("prodPrice")
                         .HasColumnType("decimal(10,2)");
 
                     b.Property<int>("productBrandId")

@@ -5,6 +5,6 @@ namespace core.Controllers
     public class ProductBrand : ProductEntities
     {
 
-        public String prodName { get; set; }
+        public string Name { get; set; }
     }
 }

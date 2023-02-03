@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
+using core.Controllers;
 using core.Entities;
 using Microsoft.Extensions.Logging;
 
@@ -32,6 +33,7 @@ namespace infrastructure.data
                             context.ProductBrand.Add(y);
 
                     }
+                        
 
                     await context.SaveChangesAsync();
 
@@ -66,16 +68,19 @@ namespace infrastructure.data
                 
                     foreach(var x in products){
 
+
+                       
+
                        
                         context.Products.Add(x);
 
                     }
 
                     await context.SaveChangesAsync();
-
+                    
             }
             
-            
+           
 
             }
 
@@ -85,7 +90,8 @@ namespace infrastructure.data
 
                 logger.LogError(e.Message);
 
-                // Console.WriteLine(e.InnerException.Message);
+
+                // Console.WriteLine(55);
 
 
             }

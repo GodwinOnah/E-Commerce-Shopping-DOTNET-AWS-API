@@ -8,13 +8,13 @@ namespace core.Controllers
 {
     public class Products : ProductEntities
     {
-        public String prodName { get; set; }
+        public string prodName { get; set; }
 
-        public String prodPicture { get; set; }
+        public string prodPicture { get; set; }
 
-        public String prodDescription { get; set; }
+        public string prodDescription { get; set; }
 
-        public int prodPrice { get; set; }
+        public decimal prodPrice { get; set; }
 
         public ProductBrand productBrand  { get; set; }
 

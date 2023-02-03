@@ -15,5 +15,7 @@ namespace core.Interfaces
         Task<IReadOnlyList<T>> ListAllAsync();
 
          Task<IReadOnlyList<T>> ListAllAsync(ISpecificationProducts<T> specification);
+
+         Task<int> CountPage(ISpecificationProducts<T> specification);
     }
 }

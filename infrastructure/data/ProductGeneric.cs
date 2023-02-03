@@ -48,5 +48,10 @@ namespace infrastructure.data.ProductsData
 
             return ProductSpecictaionEvaluator<T>.GetQuery(_context.Set<T>().AsQueryable(),specification);
         }
+
+        public async Task<int> CountPage(ISpecificationProducts<T> specification)
+        {
+            return await ApplyProductSpecs(specification).CountAsync();
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace infrastructure.data.Migrations
                 {
                     productId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: false)
+                    Name = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -29,7 +29,7 @@ namespace infrastructure.data.Migrations
                 {
                     productId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: false)
+                    Name = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -42,10 +42,10 @@ namespace infrastructure.data.Migrations
                 {
                     productId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    prodName = table.Column<string>(type: "TEXT", maxLength: 500, nullable: false),
+                    prodName = table.Column<string>(type: "TEXT", maxLength: 15, nullable: false),
+                    prodPicture = table.Column<string>(type: "TEXT", nullable: false),
                     prodDescription = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
                     prodPrice = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
-                    prodPicture = table.Column<string>(type: "TEXT", nullable: false),
                     productBrandId = table.Column<int>(type: "INTEGER", nullable: false),
                     productTypeId = table.Column<int>(type: "INTEGER", nullable: false)
                 },

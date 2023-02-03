@@ -30,9 +30,14 @@ namespace infrastructure.data
                    inputQuery=inputQuery.OrderByDescending(specification.OrderByDescending);
                 }
 
-                inputQuery=specification.productIncludes.Aggregate(
-                                               inputQuery,(current,productIncludes)=>
-                                                current.Include(productIncludes));
+                if(specification.IsPageEnables)
+                {
+                    inputQuery=inputQuery.Skip(specification.Skip).Take(specification.Take);
+
+                }
+
+                inputQuery=specification.productIncludes
+                .Aggregate(inputQuery,(current,productIncludes)=>current.Include(productIncludes));
 
                 return inputQuery;
                 

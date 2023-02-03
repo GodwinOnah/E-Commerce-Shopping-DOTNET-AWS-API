@@ -4,6 +4,6 @@ namespace core.Controllers
 {
     public class ProductType : ProductEntities
     {
-        public String prodName { get; set; }
+        public string Name { get; set; }
     }
 }
