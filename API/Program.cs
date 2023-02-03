@@ -4,9 +4,12 @@ using API.ApiErrorMiddleWares;
 using API.ApiExtensions;
 using API.AutoMapper;
 using API.ErrorsHandlers;
+using core.Entities.Identity;
 using core.Interfaces;
 using infrastructure.data;
 using infrastructure.data.ProductsData;
+using infrastructure.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -75,26 +78,7 @@ var app = builder.Build();
 
 //this code creates the database
 
-using (var scope=app.Services.CreateScope()){
 
-    var services=scope.ServiceProvider;
-
-    var loggerFactory=services.GetRequiredService<ILoggerFactory>();
-     var context=services.GetRequiredService<storeProducts>();
-
-    try{
-
-        await context.Database.MigrateAsync();
-
-        await storeProductData.storeProductsAsync(context,loggerFactory);
-    }
-
-catch(Exception e){
-        var logger=loggerFactory.CreateLogger<Program>();
-        logger.LogError(e,"Migration error has occured");
-    }
-
-}
 app.UseCors("AllowAccess_To_API");//cors
 
 app.UseMiddleware<ErrorMiddleWare>(); //the cusomized middleware
@@ -113,12 +97,34 @@ app.UseStaticFiles();
 // app.UseCors("CorsPolicy");
 
 
-
+app.UseAuthentication();//configured in IdentityExtension class
 app.UseAuthorization();
 
 app.MapControllers();
 
+using (var scope=app.Services.CreateScope()){//Contains all database configurations to create migrations
 
+    var services=scope.ServiceProvider;
+
+    var loggerFactory=services.GetRequiredService<ILoggerFactory>();
+     var context=services.GetRequiredService<storeProducts>();
+      var identityContext=services.GetRequiredService<MyAppIdentityDbContext>();
+       var userManager=services.GetRequiredService<UserManager<AppUser>>();
+
+    try{
+
+        await context.Database.MigrateAsync();
+         await identityContext.Database.MigrateAsync();
+        await storeProductData.storeProductsAsync(context,loggerFactory);
+        await IdentityUserData.SeedUserAsync(userManager);
+    }
+
+catch(Exception e){
+        var logger=loggerFactory.CreateLogger<Program>();
+        logger.LogError(e,"Migration error has occured");
+    }
+
+}
 
 
 app.Run();

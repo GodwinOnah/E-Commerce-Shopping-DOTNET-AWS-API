@@ -13,7 +13,7 @@ using infrastructure.data;
 using infrastructure.data.ProductsData;
 using Microsoft.Extensions.DependencyInjection;
 using StackExchange.Redis;
-
+using Microsoft.AspNetCore.Identity;
 
 namespace API.ApiExtensions
 {
@@ -29,6 +29,18 @@ namespace API.ApiExtensions
 
                
             });
+
+
+            services.AddIdentityCore<AppUser>(opt=>{
+
+
+            })
+            .AddEntityFrameworkStores<MyAppIdentityDbContext>()
+            .AddSignInManager<SignInManager<AppUser>>();
+
+            services.AddAuthentication();
+            services.AddAuthorization();
+           
 
             return services;
         }
