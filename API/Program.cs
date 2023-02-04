@@ -14,6 +14,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using StackExchange.Redis;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
+using infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,7 +37,7 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(c => {
                 });
 
 builder.Services.AddIdentityService(builder.Configuration);
-
+builder.Services.AddScoped<ITokenService,TokenService>();
 builder.Services.AddScoped<IBasket,BasketRepo>();
  //builder.Services.AddScoped<IProductInterface,ProductRepo>();
  builder.Services.AddScoped(typeof(IgenericProductInterface<>),(typeof(ProductGeneric<>)));
@@ -96,8 +100,8 @@ app.UseStaticFiles();
 
 // app.UseCors("CorsPolicy");
 
-
-app.UseAuthentication();//configured in IdentityExtension class
+//configured in IdentityExtension class
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

@@ -1,25 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using core.Entities.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc;
-using API.ApiErrorMiddleWares;
-using API.AutoMapper;
-using API.ErrorsHandlers;
-using core.Interfaces;
-using infrastructure.data;
-using infrastructure.data.ProductsData;
-using Microsoft.Extensions.DependencyInjection;
-using StackExchange.Redis;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace API.ApiExtensions
 {
     public static class IdentityServicesExtensions
     {
-        public static IServiceCollection AddIdentityService(this IServiceCollection services,IConfiguration config)
+        public static IServiceCollection AddIdentityService(
+            this IServiceCollection services,IConfiguration config)
         {
 
             services.AddDbContext<MyAppIdentityDbContext>(opt=>
@@ -38,10 +29,23 @@ namespace API.ApiExtensions
             .AddEntityFrameworkStores<MyAppIdentityDbContext>()
             .AddSignInManager<SignInManager<AppUser>>();
 
-            services.AddAuthentication();
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(opt=>{opt.TokenValidationParameters = new TokenValidationParameters {
+
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(
+                    Encoding.UTF8.GetBytes(config["Token:key"])),
+                
+                ValidateIssuer = true,
+                ValidIssuer = config["Token:key"],
+                ValidateAudience = false
+                
+                
+            };});
             services.AddAuthorization();
            
-
+                // Console.WriteLine( new SymmetricSecurityKey(
+                //     Encoding.UTF8.GetBytes(config["Token:super secrete key"])));
             return services;
         }
 

@@ -6,6 +6,7 @@ using API.ErrorsHandlers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using core.Entities.Identity;
+using core.Interfaces;
 
 namespace API.Controllers
 {
@@ -13,16 +14,19 @@ namespace API.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly ITokenService _tokenService;
         public UserController(UserManager<AppUser> userManager,
-         SignInManager<AppUser> signInManager)
+        
+         SignInManager<AppUser> signInManager, ITokenService tokenService)
         {
+            _tokenService = tokenService;
             _signInManager = signInManager;
             _userManager = userManager;
         }
 
          [HttpPost("login")]
         public async Task<ActionResult<UserDTO>> Login(LoginDTO loginDTO){
-                     Console.WriteLine(5);
+                   
             var user = await _userManager.FindByEmailAsync(loginDTO.email);
            
 
@@ -36,7 +40,7 @@ namespace API.Controllers
 
                 nickName = user.NickName,
                 email = user.Email,
-                token = "Token sent"
+                token =  _tokenService.createToken(user)
                 
 
             };
@@ -49,9 +53,9 @@ namespace API.Controllers
 
              var user = new AppUser{
 
-                        NickName=registerDTO.nickName,
-                        Email=registerDTO.email,
-                        UserName=registerDTO.email
+                        NickName = registerDTO.nickName,
+                        Email = registerDTO.email,
+                        UserName = registerDTO.email
              };
                    
             var result = await _userManager.CreateAsync(user, registerDTO.password);
@@ -62,7 +66,7 @@ namespace API.Controllers
 
                 nickName = user.NickName,
                 email = user.Email,
-                token = "Regired"
+                token = _tokenService.createToken(user)
                 
 
             };

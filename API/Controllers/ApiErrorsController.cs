@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using API.ErrorsHandlers;
 using infrastructure.data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -16,6 +17,15 @@ namespace API.Controllers
             _context = context;
         }
 
+
+
+        [HttpGet("testaut")]
+        [Authorize]
+        [ApiExplorerSettings(IgnoreApi =true)]
+        public ActionResult<string> GetSecretKey(){
+                return "secret stuff";
+        }
+        
 
          [HttpGet("badrequest")]
         public ActionResult GetBadRequestError(){

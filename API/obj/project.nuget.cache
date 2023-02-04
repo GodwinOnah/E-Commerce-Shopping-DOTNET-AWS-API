@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LaX7WEsP6ooFTK7LoViQiycVP8BdB3roQo6DR+XQAwciRyInFvDz6YqPr6ynkRY8+RzanU6z7yqHsBxVu3LNQA==",
+  "dgSpecHash": "wqbybbLgOGo9qiKa0Lubw3xFbv73IokHepefdKOJikNPi2AUWCeCMhwuOv5alpfLdVlHrgW1CWUikCb8eQT6ig==",
   "success": true,
   "projectFilePath": "/Users/godwinonah/Documents/bagshop/BagShop/API/API.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.authentication.abstractions/2.2.0/microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.authentication.cookies/2.2.0/microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.authentication.core/2.2.0/microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/6.0.13/microsoft.aspnetcore.authentication.jwtbearer.6.0.13.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.cryptography.internal/6.0.13/microsoft.aspnetcore.cryptography.internal.6.0.13.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/6.0.13/microsoft.aspnetcore.cryptography.keyderivation.6.0.13.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.dataprotection/2.2.0/microsoft.aspnetcore.dataprotection.2.2.0.nupkg.sha512",
@@ -54,6 +55,8 @@
     "/Users/godwinonah/.nuget/packages/microsoft.identitymodel.abstractions/6.26.0/microsoft.identitymodel.abstractions.6.26.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.26.0/microsoft.identitymodel.jsonwebtokens.6.26.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.identitymodel.logging/6.26.0/microsoft.identitymodel.logging.6.26.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/microsoft.identitymodel.protocols/6.10.0/microsoft.identitymodel.protocols.6.10.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.10.0/microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.identitymodel.tokens/6.26.0/microsoft.identitymodel.tokens.6.26.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.net.http.headers/2.2.0/microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.netcore.platforms/2.0.0/microsoft.netcore.platforms.2.0.0.nupkg.sha512",
@@ -88,9 +91,9 @@
     "/Users/godwinonah/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.text.json/7.0.1/system.text.json.7.0.1.nupkg.sha512",
-    "/Users/godwinonah/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.11/microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512",
-    "/Users/godwinonah/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.11/microsoft.netcore.app.host.osx-arm64.6.0.11.nupkg.sha512"
+    "/Users/godwinonah/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.11/microsoft.netcore.app.host.osx-arm64.6.0.11.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512"
   ],
   "logs": []
 }
