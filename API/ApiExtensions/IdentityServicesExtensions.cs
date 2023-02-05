@@ -14,39 +14,34 @@ namespace API.ApiExtensions
         {
 
             services.AddDbContext<MyAppIdentityDbContext>(opt=>
-            {
-                opt.UseSqlite(config.GetConnectionString("IdentityConnection"), 
-                b => b.MigrationsAssembly("infrastructure"));
-
-               
-            });
+                        {
+                            opt.UseSqlite(config.GetConnectionString("IdentityConnection"), 
+                            b => b.MigrationsAssembly("infrastructure"));                        
+                        });
 
 
-            services.AddIdentityCore<AppUser>(opt=>{
+            services.AddIdentityCore<AppUser>(opt=>{})
+                        .AddEntityFrameworkStores<MyAppIdentityDbContext>()
+                        .AddSignInManager<SignInManager<AppUser>>();
 
-
-            })
-            .AddEntityFrameworkStores<MyAppIdentityDbContext>()
-            .AddSignInManager<SignInManager<AppUser>>();
-
+            
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            .AddJwtBearer(opt=>{opt.TokenValidationParameters = new TokenValidationParameters {
+                        .AddJwtBearer(opt=>{opt.TokenValidationParameters = new TokenValidationParameters {
 
-                ValidateIssuerSigningKey = true,
-                IssuerSigningKey = new SymmetricSecurityKey(
-                    Encoding.UTF8.GetBytes(config["Token:key"])),
-                
-                ValidateIssuer = true,
-                ValidIssuer = config["Token:key"],
-                ValidateAudience = false
-                
-                
-            };});
+                            ValidateIssuerSigningKey = true,
+                            IssuerSigningKey = new SymmetricSecurityKey(
+                                Encoding.UTF8.GetBytes(config["Token:key"])),
+                            
+                            ValidateIssuer = true,
+                            ValidIssuer = config["Token:Issuer"],
+                            ValidateAudience = false
+                            
+                            
+                        };});
+                        
             services.AddAuthorization();
-           
-                // Console.WriteLine( new SymmetricSecurityKey(
-                //     Encoding.UTF8.GetBytes(config["Token:super secrete key"])));
-            return services;
+                    
+             return services;
         }
 
     }

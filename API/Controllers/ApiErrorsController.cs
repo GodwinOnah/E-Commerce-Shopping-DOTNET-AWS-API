@@ -19,9 +19,9 @@ namespace API.Controllers
 
 
 
-        [HttpGet("testaut")]
+        [HttpGet("testingauth")]
         [Authorize]
-        [ApiExplorerSettings(IgnoreApi =true)]
+        
         public ActionResult<string> GetSecretKey(){
                 return "secret stuff";
         }
