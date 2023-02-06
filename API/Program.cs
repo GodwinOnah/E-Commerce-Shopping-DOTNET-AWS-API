@@ -37,13 +37,13 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(c => {
                 });
 
 builder.Services.AddIdentityService(builder.Configuration);
+builder.Services.AddSwaggerDocumentation();
 builder.Services.AddScoped<ITokenService,TokenService>();
 builder.Services.AddScoped<IBasket,BasketRepo>();
  //builder.Services.AddScoped<IProductInterface,ProductRepo>();
  builder.Services.AddScoped(typeof(IgenericProductInterface<>),(typeof(ProductGeneric<>)));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
 builder.Services.AddAutoMapper(typeof(MappingProductProfile));
 // builder.Services.AddCors(option=>
 //                     {option.AddPolicy("CorsPolicy",
@@ -82,13 +82,9 @@ var app = builder.Build();
 
 //this code creates the database
 
+app.UseSwaggerDocumentation(); //the cusomized middleware from swagger extention created
 
 app.UseCors("AllowAccess_To_API");//cors
-
-app.UseMiddleware<ErrorMiddleWare>(); //the cusomized middleware
-
-app.UseSwagger();//available for both production and development mode
-app.UseSwaggerUI();//available for both production and development mode
 
 app.UseStatusCodePagesWithReExecute("/error/{0}");//use for redirecting error not handle by Error controllers
 
@@ -113,7 +109,7 @@ using (var scope=app.Services.CreateScope()){//Contains all database configurati
     var loggerFactory=services.GetRequiredService<ILoggerFactory>();
      var context=services.GetRequiredService<storeProducts>();
       var identityContext=services.GetRequiredService<MyAppIdentityDbContext>();
-       var userManager=services.GetRequiredService<UserManager<AppUser>>();
+       var userManager=services.GetRequiredService<UserManager<User>>();
 
     try{
 

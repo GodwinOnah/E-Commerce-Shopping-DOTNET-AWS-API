@@ -17,14 +17,14 @@ namespace API.Controllers
 {
     public class UserController : ApiControllerBase
     {
-        private readonly UserManager<AppUser> _userManager;
-        private readonly SignInManager<AppUser> _signInManager;
+        private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
         private readonly ITokenService _tokenService;
         private readonly IMapper _mapper;
-        public UserController(UserManager<AppUser> userManager,
+        public UserController(UserManager<User> userManager,
         
         
-         SignInManager<AppUser> signInManager, ITokenService tokenService, IMapper mapper)
+         SignInManager<User> signInManager, ITokenService tokenService, IMapper mapper)
         {
             _mapper = mapper;
             _tokenService = tokenService;
@@ -41,7 +41,7 @@ namespace API.Controllers
 
             return new UserDTO {
 
-                nickName = user.NickName,
+                nickName = user.nickName,
                 email = user.Email,
                 token =  _tokenService.createToken(user)
                 
@@ -85,6 +85,7 @@ namespace API.Controllers
         }
 
         // Use for login
+        // [Authorize]
          [HttpPost("login")]
         public async Task<ActionResult<UserDTO>> Login(LoginDTO loginDTO){
                    
@@ -99,7 +100,7 @@ namespace API.Controllers
 
             return new UserDTO {
 
-                nickName = user.NickName,
+                nickName = user.nickName,
                 email = user.Email,
                 token =  _tokenService.createToken(user)
                 
@@ -113,9 +114,17 @@ namespace API.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<UserDTO>> Register(RegisterDTO registerDTO){
 
-             var user = new AppUser{
+            if(CheckEmail(registerDTO.email).Result.Value)
+            {
 
-                        NickName = registerDTO.nickName,
+                return new BadRequestObjectResult(
+                    new ValidationErrors{Errors = 
+                    new [] {"Sorry!!..Email already in use"}});
+            }
+
+             var user = new User{
+
+                        nickName = registerDTO.nickName,
                         Email = registerDTO.email,
                         UserName = registerDTO.email
              };
@@ -126,7 +135,7 @@ namespace API.Controllers
 
             return new UserDTO {
 
-                nickName = user.NickName,
+                nickName = user.nickName,
                 email = user.Email,
                 token = _tokenService.createToken(user)
                 

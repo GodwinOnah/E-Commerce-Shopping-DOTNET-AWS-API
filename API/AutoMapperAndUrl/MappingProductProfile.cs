@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using API.AutoMapperAndUrl;
 using API.DTOs;
 using AutoMapper;
+using core;
 using core.Controllers;
 using core.Entities;
 using core.Entities.Identity;
@@ -21,6 +22,8 @@ namespace API.AutoMapper
             .ForMember(x=>x.prodPicture,y=>y.MapFrom<ProductPictureUrl>());
 
             CreateMap<Address, AddressDTO>().ReverseMap();
+            CreateMap<BasketDTO, Basket>();
+            CreateMap<BasketItemsDTO, BasketItems>();
         }
     }
 }

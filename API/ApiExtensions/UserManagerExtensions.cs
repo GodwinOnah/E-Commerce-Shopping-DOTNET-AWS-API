@@ -12,16 +12,16 @@ namespace API.ApiErrorMiddleWares
     public static class UserManagerExtensions
     {
 
-        public static async Task<AppUser> FindUserByClaimPrincipleWIthAddress
-        (this UserManager<AppUser> userManager,ClaimsPrincipal user )
+        public static async Task<User> FindUserByClaimPrincipleWIthAddress
+        (this UserManager<User> userManager,ClaimsPrincipal user )
         {
                 var email = user.FindFirstValue(ClaimTypes.Email);
                 return await userManager.Users.Include(x=>x.address)
                         .SingleOrDefaultAsync(x=>x.Email==email);
         }
 
-        public static async Task<AppUser> FindByEmailByClaimPrinciple
-        (this UserManager<AppUser> userManager, ClaimsPrincipal user )
+        public static async Task<User> FindByEmailByClaimPrinciple
+        (this UserManager<User> userManager, ClaimsPrincipal user )
         {
                 var email = user.FindFirstValue(ClaimTypes.Email);
                 return await userManager.Users

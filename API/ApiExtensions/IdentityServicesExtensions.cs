@@ -20,9 +20,9 @@ namespace API.ApiExtensions
                         });
 
 
-            services.AddIdentityCore<AppUser>(opt=>{})
+            services.AddIdentityCore<User>(opt=>{})
                         .AddEntityFrameworkStores<MyAppIdentityDbContext>()
-                        .AddSignInManager<SignInManager<AppUser>>();
+                        .AddSignInManager<SignInManager<User>>();
 
             
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
