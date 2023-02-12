@@ -80,21 +80,22 @@ builder.Services.Configure<ApiBehaviorOptions>(option =>
 
 var app = builder.Build();
 
-//this code creates the database
+
+app.UseMiddleware<ErrorMiddleWare>();
+
+app.UseStatusCodePagesWithReExecute("/error/{0}");//use for redirecting error not handle by Error controllers
 
 app.UseSwaggerDocumentation(); //the cusomized middleware from swagger extention created
 
-app.UseCors("AllowAccess_To_API");//cors
+app.UseStaticFiles();
 
-app.UseStatusCodePagesWithReExecute("/error/{0}");//use for redirecting error not handle by Error controllers
+app.UseCors("AllowAccess_To_API");//cors
 
 app.UseHttpsRedirection();
 
 app.UseRouting();//for routing
 
-app.UseStaticFiles();
 
-// app.UseCors("CorsPolicy");
 
 //configured in IdentityExtension class
 app.UseAuthentication();
@@ -102,6 +103,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+//this code creates the databases
 using (var scope=app.Services.CreateScope()){//Contains all database configurations to create migrations
 
     var services=scope.ServiceProvider;

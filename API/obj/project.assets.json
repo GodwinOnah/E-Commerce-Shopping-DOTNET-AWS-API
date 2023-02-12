@@ -1533,7 +1533,7 @@
           "Microsoft.IdentityModel.Tokens": "6.26.0",
           "Newtonsoft.Json": "13.0.2",
           "StackExchange.Redis": "2.6.90",
-          "System.IdentityModel.Tokens.Jwt": "6.26.0",
+          "System.IdentityModel.Tokens.Jwt": "6.25.1",
           "System.Text.Json": "7.0.1",
           "core": "1.0.0"
         },

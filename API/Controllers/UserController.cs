@@ -33,11 +33,13 @@ namespace API.Controllers
         }
 
         // Use to get a new user
-        [Authorize]
+        // [Authorize]
         [HttpGet]
         public async Task<ActionResult<UserDTO>> GetCurrentUser(){
 
             var user = await _userManager.FindByEmailByClaimPrinciple(HttpContext.User);
+
+            Console.WriteLine(5);
 
             return new UserDTO {
 
@@ -126,7 +128,17 @@ namespace API.Controllers
 
                         nickName = registerDTO.nickName,
                         Email = registerDTO.email,
-                        UserName = registerDTO.email
+                        UserName = registerDTO.email,
+                            address = new Address{
+                                    firstName=registerDTO.address.firstName,
+                                    middleName=registerDTO.address.middleName,
+                                    lastName=registerDTO.address.lastName,
+                                    street=registerDTO.address.street,
+                                    city=registerDTO.address.city,
+                                    country=registerDTO.address.country,
+                                    zipcode=registerDTO.address.zipcode,
+                                    phone=registerDTO.address.phone
+                        }                 
              };
                    
             var result = await _userManager.CreateAsync(user, registerDTO.password);
