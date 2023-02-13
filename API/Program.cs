@@ -40,8 +40,10 @@ builder.Services.AddIdentityService(builder.Configuration);
 builder.Services.AddSwaggerDocumentation();
 builder.Services.AddScoped<ITokenService,TokenService>();
 builder.Services.AddScoped<IBasket,BasketRepo>();
+builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
+builder.Services.AddScoped<IOrders,OrderServices>();
  //builder.Services.AddScoped<IProductInterface,ProductRepo>();
- builder.Services.AddScoped(typeof(IgenericProductInterface<>),(typeof(ProductGeneric<>)));
+ builder.Services.AddScoped(typeof(IgenericInterfaceRepository<>),(typeof(ProductGeneric<>)));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 builder.Services.AddAutoMapper(typeof(MappingProductProfile));

@@ -9,6 +9,7 @@ using core;
 using core.Controllers;
 using core.Entities;
 using core.Entities.Identity;
+using core.Entities.Oders;
 
 namespace API.AutoMapper
 {
@@ -24,6 +25,17 @@ namespace API.AutoMapper
             CreateMap<Address, AddressDTO>().ReverseMap();
             CreateMap<BasketDTO, Basket>();
             CreateMap<BasketItemsDTO, BasketItems>();
+             CreateMap<AddressDTO, OrderAddress>();
+
+              CreateMap<Order, OrderDTOFinal>()
+              .ForMember(d=>d.delivery,o=>o.MapFrom(s=>s.delivery.DelName))
+              .ForMember(d=>d.orderPrice,o=>o.MapFrom(s=>s.delivery.DelPrice));
+
+               CreateMap<ItemOrdered, ItemOrderedDTO>()
+               .ForMember(d=>d.id,o=>o.MapFrom(s=>s.itemOrdered.productId))
+               .ForMember(d=>d.prodName,o=>o.MapFrom(s=>s.itemOrdered.prodName))
+               .ForMember(d=>d.prodPicture,o=>o.MapFrom(s=>s.itemOrdered.prodPicture))
+               .ForMember(x=>x.prodPicture,y=>y.MapFrom<OrderPictureUrlResolver>());;
         }
     }
 }

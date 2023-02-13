@@ -14,16 +14,16 @@ namespace API.Controllers
    
     public class ProductsController: ApiControllerBase
     {
-        private readonly IgenericProductInterface<Products> _products;
-        private readonly IgenericProductInterface<ProductBrand> _productBrands;
+        private readonly IgenericInterfaceRepository<Products> _products;
+        private readonly IgenericInterfaceRepository<ProductBrand> _productBrands;
 
-         private readonly IgenericProductInterface<ProductType> _productTypes;
+         private readonly IgenericInterfaceRepository<ProductType> _productTypes;
 
          private readonly IMapper _imapper;
         
-        public ProductsController(IgenericProductInterface<Products> products,
-                                IgenericProductInterface<ProductBrand> productBrands,
-                                IgenericProductInterface<ProductType> productTypes,
+        public ProductsController(IgenericInterfaceRepository<Products> products,
+                                IgenericInterfaceRepository<ProductBrand> productBrands,
+                                IgenericInterfaceRepository<ProductType> productTypes,
                                 IMapper imapper)
         {
             _productTypes = productTypes;
