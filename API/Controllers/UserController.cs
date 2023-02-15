@@ -128,17 +128,17 @@ namespace API.Controllers
 
                         nickName = registerDTO.nickName,
                         Email = registerDTO.email,
-                        UserName = registerDTO.email,
-                            address = new Address{
-                                    firstName=registerDTO.address.firstName,
-                                    middleName=registerDTO.address.middleName,
-                                    lastName=registerDTO.address.lastName,
-                                    street=registerDTO.address.street,
-                                    city=registerDTO.address.city,
-                                    country=registerDTO.address.country,
-                                    zipcode=registerDTO.address.zipcode,
-                                    phone=registerDTO.address.phone
-                        }                 
+                        UserName = registerDTO.email
+                        //     address = new Address{
+                        //             firstName=registerDTO.address.firstName,
+                        //             middleName=registerDTO.address.middleName,
+                        //             lastName=registerDTO.address.lastName,
+                        //             street=registerDTO.address.street,
+                        //             city=registerDTO.address.city,
+                        //             country=registerDTO.address.country,
+                        //             zipcode=registerDTO.address.zipcode,
+                        //             phone=registerDTO.address.phone
+                        // }                 
              };
                    
             var result = await _userManager.CreateAsync(user, registerDTO.password);

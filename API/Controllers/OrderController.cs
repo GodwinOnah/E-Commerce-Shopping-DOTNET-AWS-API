@@ -25,7 +25,7 @@ namespace API.Controllers
             _iOrders = iOrders;
         }
 
-        [HttpPost]
+[HttpPost]
          public async Task<ActionResult<OrderDTOFinal>> GetCreateOrder(OrderDTO orderDTO){
 
             var email = HttpContext.User.getEmailfromPrincipleClaims();
@@ -41,7 +41,7 @@ namespace API.Controllers
             return Ok(_mapper.Map<IReadOnlyList<OrderDTOFinal>>(order));
          }
 
-         [HttpGet]
+    [HttpGet]
          public async Task<ActionResult<IReadOnlyList<OrderDTOFinal>>> GetOrderForUser(){
 
             var email = HttpContext.User.getEmailfromPrincipleClaims();
@@ -65,7 +65,7 @@ namespace API.Controllers
 
     }
 
-    [HttpGet]
+    [HttpGet("delivery")]
          public async Task<ActionResult<IReadOnlyList<Delivery>>> GetDelivery(){
 
             return Ok(await _iOrders.GetDeliverysAsync());
