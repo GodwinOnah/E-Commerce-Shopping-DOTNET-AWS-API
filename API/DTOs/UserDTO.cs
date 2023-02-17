@@ -3,8 +3,8 @@ namespace API.Controllers
     public class UserDTO
     {
 
-        public string nickName {get; set;}
-        public string email {get; set;}
-        public string token {get; set;}
+        public string NickName {get; set;}
+        public string Email {get; set;}
+        public string Token {get; set;}
     }
 }

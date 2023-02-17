@@ -28,8 +28,8 @@ namespace API.AutoMapper
              CreateMap<AddressDTO, OrderAddress>();
 
               CreateMap<Order, OrderDTOFinal>()
-              .ForMember(d=>d.delivery,o=>o.MapFrom(s=>s.delivery.DelName))
-              .ForMember(d=>d.orderPrice,o=>o.MapFrom(s=>s.delivery.DelPrice));
+              .ForMember(d=>d.Delivery,o=>o.MapFrom(s=>s.delivery.DelName))
+              .ForMember(d=>d.OrderPrice,o=>o.MapFrom(s=>s.delivery.DelPrice));
 
                CreateMap<ItemOrdered, ItemOrderedDTO>()
                .ForMember(d=>d.id,o=>o.MapFrom(s=>s.itemOrdered.productId))

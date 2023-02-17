@@ -8,17 +8,17 @@ namespace API.DTOs
 {
     public class OrderDTOFinal
     {
-         public int  id {get; set;}
-         public string  email {get; set;}
-        public string  delivery {get; set;}
-        public decimal orderPrice {get; set;}
-        public OrderAddress address {get; set;}
-        public IReadOnlyList<ItemOrderedDTO > itemOrdered {get; set;}
-        public string  orderStatus {get; set;}
-        public DateTime  oderDate {get; set;}
-        public decimal  subTotal {get; set;}
+         public int  Id {get; set;}
+         public string  Email {get; set;}
+        public string  Delivery {get; set;}
+        public decimal OrderPrice {get; set;}
+        public OrderAddress Address {get; set;}
+        public IReadOnlyList<ItemOrderedDTO > ItemOrdered {get; set;}
+        public string  OrderStatus {get; set;}
+        public DateTime  OderDate {get; set;}
+        public decimal  SubTotal {get; set;}
          public decimal  Total {get; set;}
-        public string  paymentIntentId {get; set;}
+        public string  PaymentIntentId {get; set;}
         
     }
 }

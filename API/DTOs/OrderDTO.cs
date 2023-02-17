@@ -5,9 +5,9 @@ namespace API.Controllers
     public class OrderDTO
     {
 
-        public string basketID {get; set;}
-         public int deliveryId {get; set;}
+        public string BasketID {get; set;}
+         public int DeliveryId {get; set;}
 
-          public AddressDTO addressDTO {get; set;}
+          public AddressDTO AddressDTO {get; set;}
     }
 }

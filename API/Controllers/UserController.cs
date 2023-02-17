@@ -43,9 +43,9 @@ namespace API.Controllers
 
             return new UserDTO {
 
-                nickName = user.nickName,
-                email = user.Email,
-                token =  _tokenService.createToken(user)
+                NickName = user.NickName,
+                Email = user.Email,
+                Token =  _tokenService.createToken(user)
                 
 
             };
@@ -59,20 +59,20 @@ namespace API.Controllers
 
             var user = await _userManager.FindUserByClaimPrincipleWIthAddress(HttpContext.User);
 
-            return _mapper.Map<Address,AddressDTO>(user.address);
+            return _mapper.Map<Address,AddressDTO>(user.Address);
             }
 
-        [Authorize]
+        // [Authorize]
         [HttpPut("address")]
         public async Task<ActionResult<AddressDTO>> UpdateAddress(AddressDTO address){
 
             var user = await _userManager.FindUserByClaimPrincipleWIthAddress(HttpContext.User);
 
-            user.address = _mapper.Map<AddressDTO,Address>(address);
+            user.Address = _mapper.Map<AddressDTO,Address>(address);
 
             var result = await _userManager.UpdateAsync(user);
 
-            if(!result.Succeeded) return Ok(_mapper.Map<Address,AddressDTO>(user.address));
+            if(!result.Succeeded) return Ok(_mapper.Map<Address,AddressDTO>(user.Address));
 
             return BadRequest("Could not update user");
             }
@@ -91,20 +91,20 @@ namespace API.Controllers
          [HttpPost("login")]
         public async Task<ActionResult<UserDTO>> Login(LoginDTO loginDTO){
                    
-            var user = await _userManager.FindByEmailAsync(loginDTO.email);
+            var user = await _userManager.FindByEmailAsync(loginDTO.Email);
            
 
             if(user == null) return Unauthorized(new Responses(401));
 
-            var result = await  _signInManager.CheckPasswordSignInAsync(user,loginDTO.password,false);
+            var result = await  _signInManager.CheckPasswordSignInAsync(user,loginDTO.Password,false);
 
             if(!result.Succeeded) return Unauthorized(new Responses(401));
 
             return new UserDTO {
 
-                nickName = user.nickName,
-                email = user.Email,
-                token =  _tokenService.createToken(user)
+                NickName = user.NickName,
+                Email = user.Email,
+                Token =  _tokenService.createToken(user)
                 
 
             };
@@ -116,7 +116,7 @@ namespace API.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<UserDTO>> Register(RegisterDTO registerDTO){
 
-            if(CheckEmail(registerDTO.email).Result.Value)
+            if(CheckEmail(registerDTO.Email).Result.Value)
             {
 
                 return new BadRequestObjectResult(
@@ -126,30 +126,30 @@ namespace API.Controllers
 
              var user = new User{
 
-                        nickName = registerDTO.nickName,
-                        Email = registerDTO.email,
-                        UserName = registerDTO.email
-                        //     address = new Address{
-                        //             firstName=registerDTO.address.firstName,
-                        //             middleName=registerDTO.address.middleName,
-                        //             lastName=registerDTO.address.lastName,
-                        //             street=registerDTO.address.street,
-                        //             city=registerDTO.address.city,
-                        //             country=registerDTO.address.country,
-                        //             zipcode=registerDTO.address.zipcode,
-                        //             phone=registerDTO.address.phone
-                        // }                 
+                        NickName = registerDTO.NickName,
+                        Email = registerDTO.Email,
+                        UserName = registerDTO.Email,
+                            Address = new Address{
+                                    FirstName=registerDTO.Address.FirstName,
+                                    MiddleName=registerDTO.Address.MiddleName,
+                                    LastName=registerDTO.Address.LastName,
+                                    Street=registerDTO.Address.Street,
+                                    City=registerDTO.Address.City,
+                                    Country=registerDTO.Address.Country,
+                                    Zipcode=registerDTO.Address.Zipcode,
+                                    Phone=registerDTO.Address.Phone
+                        }                 
              };
                    
-            var result = await _userManager.CreateAsync(user, registerDTO.password);
+            var result = await _userManager.CreateAsync(user, registerDTO.Password);
         
             if(!result.Succeeded) return Unauthorized(new Responses(401));
 
             return new UserDTO {
 
-                nickName = user.nickName,
-                email = user.Email,
-                token = _tokenService.createToken(user)
+                NickName = user.NickName,
+                Email = user.Email,
+                Token = _tokenService.createToken(user)
                 
 
             };

@@ -31,9 +31,9 @@ namespace API.Controllers
             var email = HttpContext.User.getEmailfromPrincipleClaims();
            Console.WriteLine(email);
            Console.WriteLine(55);
-            var address = _mapper.Map<AddressDTO, OrderAddress>(orderDTO.addressDTO);
+            var address = _mapper.Map<AddressDTO, OrderAddress>(orderDTO.AddressDTO);
             var order = await _iOrders.CreateOrdersAsync(
-                email, orderDTO.deliveryId, orderDTO.basketID,address);
+                email, orderDTO.DeliveryId, orderDTO.BasketID,address);
                
 
             if(order==null) return BadRequest(new Responses(400,"Orders not loaded"));
