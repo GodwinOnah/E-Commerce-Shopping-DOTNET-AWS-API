@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 using API.ErrorsHandlers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using core.Entities.Identity;
-using core.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using API.ApiErrorMiddleWares;
 using AutoMapper;
+using core.Entities.Identity;
+using core.Interfaces;
 using API.DTOs;
 
 namespace API.Controllers
@@ -39,8 +39,6 @@ namespace API.Controllers
 
             var user = await _userManager.FindByEmailByClaimPrinciple(HttpContext.User);
 
-            Console.WriteLine(5);
-
             return new UserDTO {
 
                 NickName = user.NickName,
@@ -53,7 +51,7 @@ namespace API.Controllers
             
         }
 
-        [Authorize]
+        // [Authorize]
         [HttpGet("address")]
         public async Task<ActionResult<AddressDTO>> GetAddress(){
 
@@ -115,7 +113,8 @@ namespace API.Controllers
     //   Use to register a new customer
         [HttpPost("register")]
         public async Task<ActionResult<UserDTO>> Register(RegisterDTO registerDTO){
-
+            Console.WriteLine(registerDTO);
+           Console.WriteLine("\n\n***Register555***\n\n");
             if(CheckEmail(registerDTO.Email).Result.Value)
             {
 
@@ -130,28 +129,25 @@ namespace API.Controllers
                         Email = registerDTO.Email,
                         UserName = registerDTO.Email,
                             Address = new Address{
-                                    FirstName=registerDTO.Address.FirstName,
-                                    MiddleName=registerDTO.Address.MiddleName,
-                                    LastName=registerDTO.Address.LastName,
-                                    Street=registerDTO.Address.Street,
-                                    City=registerDTO.Address.City,
-                                    Country=registerDTO.Address.Country,
-                                    Zipcode=registerDTO.Address.Zipcode,
-                                    Phone=registerDTO.Address.Phone
+                                    FirstName=registerDTO.FirstName,
+                                    MiddleName=registerDTO.MiddleName,
+                                    LastName=registerDTO.LastName,
+                                    Street=registerDTO.Street,
+                                    City=registerDTO.City,
+                                    Country=registerDTO.Country,
+                                    Zipcode=registerDTO.Zipcode,
+                                    Phone=registerDTO.Phone
                         }                 
              };
-                   
+                
             var result = await _userManager.CreateAsync(user, registerDTO.Password);
         
             if(!result.Succeeded) return Unauthorized(new Responses(401));
 
             return new UserDTO {
-
                 NickName = user.NickName,
                 Email = user.Email,
-                Token = _tokenService.createToken(user)
-                
-
+                Token = _tokenService.createToken(user)    
             };
 
                  
