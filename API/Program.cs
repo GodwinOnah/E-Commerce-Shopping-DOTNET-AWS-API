@@ -112,7 +112,7 @@ using (var scope=app.Services.CreateScope()){//Contains all database configurati
 
     var loggerFactory=services.GetRequiredService<ILoggerFactory>();
      var context=services.GetRequiredService<storeProducts>();
-      var identityContext=services.GetRequiredService<MyAppIdentityDbContext>();
+      var identityContext=services.GetRequiredService<UserIdentityDbContext>();
        var userManager=services.GetRequiredService<UserManager<User>>();
 
     try{

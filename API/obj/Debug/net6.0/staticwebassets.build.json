@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CkttlgzM/FWrtakqLMDsWAvyLOqpS3lNhS6J67NkyVM=",
+  "Hash": "h/iLmNCV9jdMg2PvS2Uz1WlDEC2dXYuj6Cx34Aw9x9w=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "API/wwwroot",
       "Source": "API",
-      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/",
       "BasePath": "_content/API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/.DS_Store",
+      "Identity": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/.DS_Store",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/",
       "BasePath": "_content/API",
       "RelativePath": ".DS_Store",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot/.DS_Store"
     },
     {
-      "Identity": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/bags/.DS_Store",
+      "Identity": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/bags/.DS_Store",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/",
       "BasePath": "_content/API",
       "RelativePath": "bags/.DS_Store",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot/bags/.DS_Store"
     },
     {
-      "Identity": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/bags/blackHandBag.webp",
+      "Identity": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/bags/blackHandBag.webp",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/",
       "BasePath": "_content/API",
       "RelativePath": "bags/blackHandBag.webp",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot/bags/blackHandBag.webp"
     },
     {
-      "Identity": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/bags/blackLaptopbag.webp",
+      "Identity": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/bags/blackLaptopbag.webp",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/",
       "BasePath": "_content/API",
       "RelativePath": "bags/blackLaptopbag.webp",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot/bags/blackLaptopbag.webp"
     },
     {
-      "Identity": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/bags/brownHandbag.webp",
+      "Identity": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/bags/brownHandbag.webp",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/",
       "BasePath": "_content/API",
       "RelativePath": "bags/brownHandbag.webp",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot/bags/brownHandbag.webp"
     },
     {
-      "Identity": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/bags/greenHandbag.webp",
+      "Identity": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/bags/greenHandbag.webp",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/",
       "BasePath": "_content/API",
       "RelativePath": "bags/greenHandbag.webp",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot/bags/greenHandbag.webp"
     },
     {
-      "Identity": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/bags/redHandbag.webp",
+      "Identity": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/bags/redHandbag.webp",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/",
       "BasePath": "_content/API",
       "RelativePath": "bags/redHandbag.webp",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot/bags/redHandbag.webp"
     },
     {
-      "Identity": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/bags/YellowishSiknHandbag.webp",
+      "Identity": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/bags/YellowishSiknHandbag.webp",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShop/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/wwwroot/",
       "BasePath": "_content/API",
       "RelativePath": "bags/YellowishSiknHandbag.webp",
       "AssetKind": "All",

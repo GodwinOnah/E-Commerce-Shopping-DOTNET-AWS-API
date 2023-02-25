@@ -57,7 +57,7 @@ namespace API.Controllers
 
             var user = await _userManager.FindUserByClaimPrincipleWIthAddress(HttpContext.User);
 
-            return _mapper.Map<Address,AddressDTO>(user.Address);
+            return _mapper.Map<Address,AddressDTO>(user.address);
             }
 
         // [Authorize]
@@ -66,11 +66,11 @@ namespace API.Controllers
 
             var user = await _userManager.FindUserByClaimPrincipleWIthAddress(HttpContext.User);
 
-            user.Address = _mapper.Map<AddressDTO,Address>(address);
+            user.address = _mapper.Map<AddressDTO,Address>(address);
 
             var result = await _userManager.UpdateAsync(user);
 
-            if(!result.Succeeded) return Ok(_mapper.Map<Address,AddressDTO>(user.Address));
+            if(!result.Succeeded) return Ok(_mapper.Map<Address,AddressDTO>(user.address));
 
             return BadRequest("Could not update user");
             }
@@ -128,7 +128,7 @@ namespace API.Controllers
                         NickName = registerDTO.NickName,
                         Email = registerDTO.Email,
                         UserName = registerDTO.Email,
-                            Address = new Address{
+                            address = new Address{
                                     FirstName=registerDTO.FirstName,
                                     MiddleName=registerDTO.MiddleName,
                                     LastName=registerDTO.LastName,
