@@ -18,6 +18,8 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using infrastructure.Services;
+using core;
+using core.Entities.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,6 +44,7 @@ builder.Services.AddScoped<ITokenService,TokenService>();
 builder.Services.AddScoped<IBasket,BasketRepo>();
 builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
 builder.Services.AddScoped<IOrders,OrderServices>();
+builder.Services.AddScoped<IPaymentService,PaymentServices>();
  //builder.Services.AddScoped<IProductInterface,ProductRepo>();
  builder.Services.AddScoped(typeof(IgenericInterfaceRepository<>),(typeof(ProductGeneric<>)));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -126,9 +129,6 @@ using (var scope=app.Services.CreateScope()){//Contains all database configurati
 catch(Exception e){
         var logger=loggerFactory.CreateLogger<Program>();
         logger.LogError(e,"Migration error has occured");
-    }
-
-}
-
+    }}
 
 app.Run();

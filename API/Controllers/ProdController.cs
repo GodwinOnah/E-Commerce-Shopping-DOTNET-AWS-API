@@ -69,7 +69,7 @@ namespace API.Controllers
         {
 
             var productBrandList=await _productBrands.ListAllAsync();
-
+            
             return Ok(productBrandList);
 
         }
@@ -79,6 +79,8 @@ namespace API.Controllers
         {
 
             var productTypeList = await _productTypes.ListAllAsync();
+
+            
 
              return Ok(productTypeList);
 
