@@ -25,7 +25,7 @@ namespace API.AutoMapper
             CreateMap<Address, AddressDTO>().ReverseMap();
             CreateMap<BasketDTO, Basket>();
             CreateMap<BasketItemsDTO, BasketItems>();
-             CreateMap<AddressDTO, OrderAddress>();
+             CreateMap<AddressDTO,ShippingAddress>();
 
               CreateMap<Order, OrderDTOFinal>()
               .ForMember(d=>d.delivery,o=>o.MapFrom(s=>s.delivery.delName))

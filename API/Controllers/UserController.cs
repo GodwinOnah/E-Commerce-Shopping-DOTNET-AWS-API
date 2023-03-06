@@ -22,8 +22,7 @@ namespace API.Controllers
         private readonly ITokenService _tokenService;
         private readonly IMapper _mapper;
         public UserController(UserManager<User> userManager,
-        
-        
+           
          SignInManager<User> signInManager, ITokenService tokenService, IMapper mapper)
         {
             _mapper = mapper;
@@ -41,8 +40,7 @@ namespace API.Controllers
                 NickName = user.NickName,
                 Email = user.Email,
                 Token =  _tokenService.createToken(user)
-            };    
-        }
+            };}
 
         // [Authorize]
         [HttpGet("address")]
@@ -60,8 +58,6 @@ namespace API.Controllers
             if(!result.Succeeded) return Ok(_mapper.Map<Address,AddressDTO>(user.address));
             return BadRequest("Could not update user");
             }
-
-
         
         // Check if Email Exist
          [HttpGet("emailexist")]
@@ -81,23 +77,19 @@ namespace API.Controllers
                 NickName = user.NickName,
                 Email = user.Email,
                 Token =  _tokenService.createToken(user)
-            };                
-        }
+            };}
       
     //   Use to register a new customer
         [HttpPost("register")]
-        public async Task<ActionResult<UserDTO>> Register(RegisterDTO registerDTO){
-        
+        public async Task<ActionResult<UserDTO>> Register(RegisterDTO registerDTO){  
             if(CheckEmail(registerDTO.Email).Result.Value)
             {
-
                 return new BadRequestObjectResult(
                     new ValidationErrors{Errors = 
                     new [] {"Sorry!!..Email already in use"}});
             }
 
              var user = new User{
-
                         NickName = registerDTO.NickName,
                         Email = registerDTO.Email,
                         UserName = registerDTO.Email,
@@ -110,22 +102,12 @@ namespace API.Controllers
                                     Country=registerDTO.Country,
                                     Zipcode=registerDTO.Zipcode,
                                     Phone=registerDTO.Phone
-                        }                 
-             };
+                        }};
                 
-            var result = await _userManager.CreateAsync(user, registerDTO.Password);
-        
+            var result = await _userManager.CreateAsync(user, registerDTO.Password);       
             if(!result.Succeeded) return Unauthorized(new Responses(401));
-
             return new UserDTO {
                 NickName = user.NickName,
                 Email = user.Email,
                 Token = _tokenService.createToken(user)    
-            };
-
-                 
-        }
-
-
-    }
-}
+            };}}}

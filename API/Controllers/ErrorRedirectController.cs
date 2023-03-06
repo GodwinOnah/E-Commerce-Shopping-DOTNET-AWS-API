@@ -11,9 +11,7 @@ namespace API.Controllers
     [ApiExplorerSettings(IgnoreApi =true)]
     public class ErrorRedirectController: ApiControllerBase
     {
-
         public IActionResult Err(int code){
-
                 return new ObjectResult(new Responses(code));
         }
         

@@ -42,6 +42,7 @@ builder.Services.AddIdentityService(builder.Configuration);
 builder.Services.AddSwaggerDocumentation();
 builder.Services.AddScoped<ITokenService,TokenService>();
 builder.Services.AddScoped<IBasket,BasketRepo>();
+builder.Services.AddSingleton<ICashing,CashingService>();
 builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
 builder.Services.AddScoped<IOrders,OrderServices>();
 builder.Services.AddScoped<IPaymentService,PaymentServices>();
