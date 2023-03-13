@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EDEZGY7LGqGtdBMSbpgxTM5sfRDqMCVfcB+6+2XB75OixNZwBnDJMrzNrw9LnX4Dow6RAxpdpFMWkg8SFE/wrQ==",
+  "dgSpecHash": "mLeaPDI52NQL0+57I4ans+Bmwm5NE4fMLNFUMww8XcTAXe3QlkOvOQ2cOrGYVccC0uo9RY3O8a8L6o06IR/KDA==",
   "success": true,
   "projectFilePath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/API.csproj",
   "expectedPackageFiles": [
@@ -127,6 +127,7 @@
     "/Users/godwinonah/.nuget/packages/system.runtime.interopservices/4.3.0/system.runtime.interopservices.4.3.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.runtime.numerics/4.3.0/system.runtime.numerics.4.3.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.security.accesscontrol/6.0.0/system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.security.claims/4.3.0/system.security.claims.4.3.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.security.cryptography.algorithms/4.3.0/system.security.cryptography.algorithms.4.3.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.security.cryptography.csp/4.3.0/system.security.cryptography.csp.4.3.0.nupkg.sha512",
@@ -138,6 +139,7 @@
     "/Users/godwinonah/.nuget/packages/system.security.cryptography.x509certificates/4.3.0/system.security.cryptography.x509certificates.4.3.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.security.cryptography.xml/4.5.0/system.security.cryptography.xml.4.5.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.security.permissions/6.0.0/system.security.permissions.6.0.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.security.principal/4.3.0/system.security.principal.4.3.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.security.principal.windows/4.5.0/system.security.principal.windows.4.5.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",

@@ -98,6 +98,10 @@
               "target": "Package",
               "version": "[4.3.0, )"
             },
+            "System.Security.Claims": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "System.Text.Json": {
               "target": "Package",
               "version": "[7.0.1, )"

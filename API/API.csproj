@@ -26,6 +26,7 @@
    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.13" />
     <PackageReference Include="System.Net.Requests" Version="4.3.0" />
+    <PackageReference Include="System.Security.Claims" Version="4.3.0" />
    <PackageReference Include="System.Text.Json" Version="7.0.1" />
   </ItemGroup>
 

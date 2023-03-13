@@ -27,23 +27,28 @@ namespace API.Controllers
         }
 
 [HttpPost]
-         public async Task<ActionResult<OrderDTOFinal>> CreateOrder(OrderDTO orderDTO){
-            // var email = HttpContext.User.getEmailfromPrincipleClaims();
-            var email ="dan@gmail.com";
+         public async Task<ActionResult<Order>> CreateOrder(OrderDTO orderDTO){
+            var email = HttpContext.User.getEmailfromPrincipleClaims();
+            // var email ="dan@gmail.com";
             var address = _mapper.Map<AddressDTO, ShippingAddress>(orderDTO.shippingAddress);
             var order = await _iOrders.CreateOrdersAsync(email, orderDTO.basketId,
-            orderDTO.deliveryId,address);  
+            orderDTO.deliveryId,address); 
+            // Console.WriteLine("\n\n\n\n\n"+order.delivery.delName+"\n\n\n\n\n"); 
             if(order==null) return BadRequest(new Responses(400,"Orders not loaded"));
-            return Ok(_mapper.Map<IReadOnlyList<OrderDTOFinal>>(order));
+            var xorder = order;
+            // Console.WriteLine("\n\n\n\n\n"+xorder+"\n\n\n\n\n"); 
+
+            return Ok(xorder);
          }
 
     // [Cashing(600)]
     [HttpGet]
          public async Task<ActionResult<IReadOnlyList<OrderDTOFinal>>> GetOrderForUser(){
-            // var email = HttpContext.User.getEmailfromPrincipleClaims();
-            var email ="dan@gmail.com";
+            var email = HttpContext.User.getEmailfromPrincipleClaims();
+            // var email ="dan@gmail.com";
+            //  Console.WriteLine("\n\n\n\n\n"+2222+"\n\n\n\n\n");
             var orders = await  _iOrders.GetOrdersAsync(email);
-            Console.WriteLine("\n\n\n\n\n"+orders+"\n\n\n\n\n");
+            
             return Ok(_mapper.Map<IReadOnlyList<OrderDTOFinal>>(orders));
     }
 
@@ -51,6 +56,7 @@ namespace API.Controllers
     [HttpGet("{id}")]
          public async Task<ActionResult<OrderDTOFinal>> GetOrderForUser(int id){
             var email = HttpContext.User.getEmailfromPrincipleClaims();
+            //  var email ="dan@gmail.com";
             var order = await  _iOrders.GetOrdersByIdAsync(id,email);
             if( order == null ) return NotFound(new Responses(400));
             return _mapper.Map<OrderDTOFinal>(order);
