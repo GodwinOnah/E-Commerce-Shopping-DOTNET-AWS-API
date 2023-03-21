@@ -10,8 +10,9 @@ namespace API.ApiExtensions
     {
 
          public static string getEmailfromPrincipleClaims (this ClaimsPrincipal user){
-                
-            return user.FindFirstValue(ClaimTypes.Email);
+                var email = user.FindFirstValue(ClaimTypes.Email);
+                Console.WriteLine("\n\n\n"+email+10020+"\n\n\n");
+            return email;
 
          }
         

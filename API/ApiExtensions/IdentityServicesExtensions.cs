@@ -13,7 +13,7 @@ namespace API.ApiExtensions
             this IServiceCollection services,IConfiguration config)
         {
 
-            services.AddDbContext<MyAppIdentityDbContext>(opt=>
+            services.AddDbContext<UserIdentityDbContext>(opt=>
                         {
                             opt.UseSqlite(config.GetConnectionString("IdentityConnection"), 
                             b => b.MigrationsAssembly("infrastructure"));                        
@@ -21,7 +21,7 @@ namespace API.ApiExtensions
 
 
             services.AddIdentityCore<User>(opt=>{})
-                        .AddEntityFrameworkStores<MyAppIdentityDbContext>()
+                        .AddEntityFrameworkStores<UserIdentityDbContext>()
                         .AddSignInManager<SignInManager<User>>();
 
             
@@ -31,8 +31,7 @@ namespace API.ApiExtensions
 
                             ValidateIssuerSigningKey = true,
                             IssuerSigningKey = new SymmetricSecurityKey(
-                                Encoding.UTF8.GetBytes(config["Token:key"])),
-                            
+                                                Encoding.UTF8.GetBytes(config["Token:key"])),
                             ValidateIssuer = true,
                             ValidIssuer = config["Token:Issuer"],
                             ValidateAudience = false

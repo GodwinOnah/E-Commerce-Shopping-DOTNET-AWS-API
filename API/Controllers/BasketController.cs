@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using API.DTOs;
+using API.Helper;
 using AutoMapper;
 using core;
 using core.Interfaces;
@@ -21,7 +22,8 @@ namespace API.Controllers
             _mapper = mapper;
             _basket = basket;
         }
-
+        
+        // [Cashing(600)]
         [HttpGet]
         public async Task<ActionResult<Basket>> GetBasketById(string id){
 

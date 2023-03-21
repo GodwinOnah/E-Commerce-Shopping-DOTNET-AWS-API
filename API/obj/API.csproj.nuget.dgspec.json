@@ -1,33 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "/Users/godwinonah/Documents/bagshop/BagShop/API/API.csproj": {}
+    "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/API.csproj": {}
   },
   "projects": {
-    "/Users/godwinonah/Documents/bagshop/BagShop/API/API.csproj": {
+    "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/godwinonah/Documents/bagshop/BagShop/API/API.csproj",
+        "projectUniqueName": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/Users/godwinonah/Documents/bagshop/BagShop/API/API.csproj",
+        "projectPath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/API.csproj",
         "packagesPath": "/Users/godwinonah/.nuget/packages/",
-        "outputPath": "/Users/godwinonah/Documents/bagshop/BagShop/API/obj/",
+        "outputPath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/godwinonah/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/godwinonah/Documents/bagshop/BagShop/infrastructure/infrastructure.csproj": {
-                "projectPath": "/Users/godwinonah/Documents/bagshop/BagShop/infrastructure/infrastructure.csproj"
+              "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/infrastructure/infrastructure.csproj": {
+                "projectPath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/infrastructure/infrastructure.csproj"
               }
             }
           }
@@ -39,8 +39,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
@@ -48,11 +48,27 @@
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[6.0.13, )"
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authorization.Policy": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.13, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.4, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -82,6 +98,14 @@
               "target": "Package",
               "version": "[6.26.0, )"
             },
+            "System.Net.Requests": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Security.Claims": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "System.Text.Json": {
               "target": "Package",
               "version": "[7.0.1, )"
@@ -98,20 +122,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.osx-arm64",
-              "version": "[6.0.11, 6.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -120,31 +130,31 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/godwinonah/Documents/bagshop/BagShop/core/core.csproj": {
+    "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/core/core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/godwinonah/Documents/bagshop/BagShop/core/core.csproj",
+        "projectUniqueName": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/core/core.csproj",
         "projectName": "core",
-        "projectPath": "/Users/godwinonah/Documents/bagshop/BagShop/core/core.csproj",
+        "projectPath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/core/core.csproj",
         "packagesPath": "/Users/godwinonah/.nuget/packages/",
-        "outputPath": "/Users/godwinonah/Documents/bagshop/BagShop/core/obj/",
+        "outputPath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/godwinonah/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -155,8 +165,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -178,49 +188,39 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/godwinonah/Documents/bagshop/BagShop/infrastructure/infrastructure.csproj": {
+    "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/infrastructure/infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/godwinonah/Documents/bagshop/BagShop/infrastructure/infrastructure.csproj",
+        "projectUniqueName": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/infrastructure/infrastructure.csproj",
         "projectName": "infrastructure",
-        "projectPath": "/Users/godwinonah/Documents/bagshop/BagShop/infrastructure/infrastructure.csproj",
+        "projectPath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/infrastructure/infrastructure.csproj",
         "packagesPath": "/Users/godwinonah/.nuget/packages/",
-        "outputPath": "/Users/godwinonah/Documents/bagshop/BagShop/infrastructure/obj/",
+        "outputPath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/godwinonah/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/godwinonah/Documents/bagshop/BagShop/core/core.csproj": {
-                "projectPath": "/Users/godwinonah/Documents/bagshop/BagShop/core/core.csproj"
+              "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/core/core.csproj": {
+                "projectPath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/core/core.csproj"
               }
             }
           }
@@ -232,12 +232,20 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "Microsoft.AspNetCore.Authorization": {
               "target": "Package",
-              "version": "[6.0.13, )"
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authorization.Policy": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
             },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
@@ -265,9 +273,21 @@
               "target": "Package",
               "version": "[2.6.90, )"
             },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[41.7.0, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.25.1, )"
+              "version": "[6.26.0, )"
+            },
+            "System.Net.Requests": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Security.Claims": {
+              "target": "Package",
+              "version": "[4.0.0, )"
             },
             "System.Text.Json": {
               "target": "Package",
@@ -285,22 +305,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }

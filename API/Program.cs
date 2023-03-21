@@ -6,8 +6,6 @@ using API.AutoMapper;
 using API.ErrorsHandlers;
 using core.Entities.Identity;
 using core.Interfaces;
-using infrastructure.data;
-using infrastructure.data.ProductsData;
 using infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +15,11 @@ using StackExchange.Redis;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using core;
+using core.Entities.Interfaces;
+using Stripe;
+using infrastructure.data;
+using infrastructure.data.ProductsData;
 using infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -38,10 +41,12 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(c => {
 
 builder.Services.AddIdentityService(builder.Configuration);
 builder.Services.AddSwaggerDocumentation();
-builder.Services.AddScoped<ITokenService,TokenService>();
+builder.Services.AddScoped<ITokenService,TokenServices>();
 builder.Services.AddScoped<IBasket,BasketRepo>();
+builder.Services.AddSingleton<ICashing,CashingService>();
 builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
 builder.Services.AddScoped<IOrders,OrderServices>();
+builder.Services.AddScoped<IPaymentService,PaymentServices>();
  //builder.Services.AddScoped<IProductInterface,ProductRepo>();
  builder.Services.AddScoped(typeof(IgenericInterfaceRepository<>),(typeof(ProductGeneric<>)));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -58,7 +63,7 @@ builder.Services.AddCors(option=>
                     option.AddPolicy("AllowAccess_To_API",
                         policy=>
                         policy.AllowAnyHeader().AllowAnyMethod()
-                        .AllowCredentials().WithOrigins("http://localhost:4200").WithOrigins("http://localhost:7135/basket")
+                        .AllowCredentials().WithOrigins("http://localhost:4200")
 ));
 
 builder.Services.Configure<ApiBehaviorOptions>(option =>
@@ -112,7 +117,7 @@ using (var scope=app.Services.CreateScope()){//Contains all database configurati
 
     var loggerFactory=services.GetRequiredService<ILoggerFactory>();
      var context=services.GetRequiredService<storeProducts>();
-      var identityContext=services.GetRequiredService<MyAppIdentityDbContext>();
+      var identityContext=services.GetRequiredService<UserIdentityDbContext>();
        var userManager=services.GetRequiredService<UserManager<User>>();
 
     try{
@@ -125,10 +130,6 @@ using (var scope=app.Services.CreateScope()){//Contains all database configurati
 
 catch(Exception e){
         var logger=loggerFactory.CreateLogger<Program>();
-        logger.LogError(e,"Migration error has occured");
-    }
-
-}
-
+        logger.LogError(e,"Migration error has occured");}}
 
 app.Run();
