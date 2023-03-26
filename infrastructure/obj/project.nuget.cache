@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y24cBaxjMKZcaloVysJrByIDz1Pur/+pGBepInO8hXRBO3maWL5/7HlJ2RAwSj89FgLim3qDAIBFX30eHXOzMg==",
+  "dgSpecHash": "/Bxig76kTz27abHg+7/eKWlpIUNI+WpFKD6MN1DtJi6/Ho1g+WRONCTQLonbjUmdccZ9FS5+7EmwyYV9anCCSw==",
   "success": true,
-  "projectFilePath": "/Users/godwinonah/Documents/bagshop/BagShop/infrastructure/infrastructure.csproj",
+  "projectFilePath": "/Users/godwinonah/Documents/BagProject/BagShop-API/infrastructure/infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/godwinonah/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.authentication/2.2.0/microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
@@ -79,8 +79,8 @@
     "/Users/godwinonah/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.text.json/7.0.1/system.text.json.7.0.1.nupkg.sha512",
-    "/Users/godwinonah/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
-    "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.11/microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512"
+    "/Users/godwinonah/.nuget/packages/microsoft.netcore.app.ref/6.0.14/microsoft.netcore.app.ref.6.0.14.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.14/microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512"
   ],
   "logs": []
 }

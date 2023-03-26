@@ -98,3 +98,13 @@
 /Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/obj/Debug/net7.0/API.csproj.CopyComplete
 /Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/obj/Debug/net7.0/API.genruntimeconfig.cache
 /Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/obj/Debug/net7.0/ref/API.dll
+/Users/godwinonah/Documents/BagProject/BagShop-API/API/obj/Debug/net7.0/API.csproj.AssemblyReference.cache
+/Users/godwinonah/Documents/BagProject/BagShop-API/API/obj/Debug/net7.0/API.GeneratedMSBuildEditorConfig.editorconfig
+/Users/godwinonah/Documents/BagProject/BagShop-API/API/obj/Debug/net7.0/API.AssemblyInfoInputs.cache
+/Users/godwinonah/Documents/BagProject/BagShop-API/API/obj/Debug/net7.0/API.AssemblyInfo.cs
+/Users/godwinonah/Documents/BagProject/BagShop-API/API/obj/Debug/net7.0/API.csproj.CoreCompileInputs.cache
+/Users/godwinonah/Documents/BagProject/BagShop-API/API/obj/Debug/net7.0/API.MvcApplicationPartsAssemblyInfo.cs
+/Users/godwinonah/Documents/BagProject/BagShop-API/API/obj/Debug/net7.0/API.MvcApplicationPartsAssemblyInfo.cache
+/Users/godwinonah/Documents/BagProject/BagShop-API/API/obj/Debug/net7.0/API.dll
+/Users/godwinonah/Documents/BagProject/BagShop-API/API/obj/Debug/net7.0/refint/API.dll
+/Users/godwinonah/Documents/BagProject/BagShop-API/API/obj/Debug/net7.0/API.pdb

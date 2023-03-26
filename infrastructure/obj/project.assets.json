@@ -3191,11 +3191,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/godwinonah/Documents/bagshop/BagShop/infrastructure/infrastructure.csproj",
+      "projectUniqueName": "/Users/godwinonah/Documents/BagProject/BagShop-API/infrastructure/infrastructure.csproj",
       "projectName": "infrastructure",
-      "projectPath": "/Users/godwinonah/Documents/bagshop/BagShop/infrastructure/infrastructure.csproj",
+      "projectPath": "/Users/godwinonah/Documents/BagProject/BagShop-API/infrastructure/infrastructure.csproj",
       "packagesPath": "/Users/godwinonah/.nuget/packages/",
-      "outputPath": "/Users/godwinonah/Documents/bagshop/BagShop/infrastructure/obj/",
+      "outputPath": "/Users/godwinonah/Documents/BagProject/BagShop-API/infrastructure/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/godwinonah/.nuget/NuGet/NuGet.Config"
@@ -3210,8 +3210,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/godwinonah/Documents/bagshop/BagShop/core/core.csproj": {
-              "projectPath": "/Users/godwinonah/Documents/bagshop/BagShop/core/core.csproj"
+            "/Users/godwinonah/Documents/BagProject/BagShop-API/core/core.csproj": {
+              "projectPath": "/Users/godwinonah/Documents/BagProject/BagShop-API/core/core.csproj"
             }
           }
         }
@@ -3275,11 +3275,11 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.11, 6.0.11]"
+            "version": "[6.0.14, 6.0.14]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.11, 6.0.11]"
+            "version": "[6.0.14, 6.0.14]"
           }
         ],
         "frameworkReferences": {
@@ -3287,7 +3287,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
       }
     }
   }

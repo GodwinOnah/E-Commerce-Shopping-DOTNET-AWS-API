@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/API.csproj": {}
+    "/Users/godwinonah/Documents/BagProject/BagShop-API/API/API.csproj": {}
   },
   "projects": {
-    "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/API.csproj": {
+    "/Users/godwinonah/Documents/BagProject/BagShop-API/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/API.csproj",
+        "projectUniqueName": "/Users/godwinonah/Documents/BagProject/BagShop-API/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/API.csproj",
+        "projectPath": "/Users/godwinonah/Documents/BagProject/BagShop-API/API/API.csproj",
         "packagesPath": "/Users/godwinonah/.nuget/packages/",
-        "outputPath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/API/obj/",
+        "outputPath": "/Users/godwinonah/Documents/BagProject/BagShop-API/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/godwinonah/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/infrastructure/infrastructure.csproj": {
-                "projectPath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/infrastructure/infrastructure.csproj"
+              "/Users/godwinonah/Documents/BagProject/BagShop-API/infrastructure/infrastructure.csproj": {
+                "projectPath": "/Users/godwinonah/Documents/BagProject/BagShop-API/infrastructure/infrastructure.csproj"
               }
             }
           }
@@ -98,10 +98,6 @@
               "target": "Package",
               "version": "[6.26.0, )"
             },
-            "System.Net.Requests": {
-              "target": "Package",
-              "version": "[4.3.0, )"
-            },
             "System.Security.Claims": {
               "target": "Package",
               "version": "[4.0.0, )"
@@ -134,27 +130,27 @@
         }
       }
     },
-    "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/core/core.csproj": {
+    "/Users/godwinonah/Documents/BagProject/BagShop-API/core/core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/core/core.csproj",
+        "projectUniqueName": "/Users/godwinonah/Documents/BagProject/BagShop-API/core/core.csproj",
         "projectName": "core",
-        "projectPath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/core/core.csproj",
+        "projectPath": "/Users/godwinonah/Documents/BagProject/BagShop-API/core/core.csproj",
         "packagesPath": "/Users/godwinonah/.nuget/packages/",
-        "outputPath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/core/obj/",
+        "outputPath": "/Users/godwinonah/Documents/BagProject/BagShop-API/core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/godwinonah/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net6.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -165,8 +161,8 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -188,6 +184,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.14, 6.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.14, 6.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -197,30 +203,30 @@
         }
       }
     },
-    "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/infrastructure/infrastructure.csproj": {
+    "/Users/godwinonah/Documents/BagProject/BagShop-API/infrastructure/infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/infrastructure/infrastructure.csproj",
+        "projectUniqueName": "/Users/godwinonah/Documents/BagProject/BagShop-API/infrastructure/infrastructure.csproj",
         "projectName": "infrastructure",
-        "projectPath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/infrastructure/infrastructure.csproj",
+        "projectPath": "/Users/godwinonah/Documents/BagProject/BagShop-API/infrastructure/infrastructure.csproj",
         "packagesPath": "/Users/godwinonah/.nuget/packages/",
-        "outputPath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/infrastructure/obj/",
+        "outputPath": "/Users/godwinonah/Documents/BagProject/BagShop-API/infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/godwinonah/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net6.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/core/core.csproj": {
-                "projectPath": "/Users/godwinonah/Documents/bagshop/BagShopRevisited/BagShop-API/core/core.csproj"
+              "/Users/godwinonah/Documents/BagProject/BagShop-API/core/core.csproj": {
+                "projectPath": "/Users/godwinonah/Documents/BagProject/BagShop-API/core/core.csproj"
               }
             }
           }
@@ -232,21 +238,9 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Authorization": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.AspNetCore.Authorization.Policy": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.AspNetCore.Http": {
-              "target": "Package",
-              "version": "[2.2.2, )"
-            },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -273,21 +267,9 @@
               "target": "Package",
               "version": "[2.6.90, )"
             },
-            "Stripe.net": {
-              "target": "Package",
-              "version": "[41.7.0, )"
-            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.26.0, )"
-            },
-            "System.Net.Requests": {
-              "target": "Package",
-              "version": "[4.3.0, )"
-            },
-            "System.Security.Claims": {
-              "target": "Package",
-              "version": "[4.0.0, )"
             },
             "System.Text.Json": {
               "target": "Package",
@@ -305,6 +287,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.14, 6.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.14, 6.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"

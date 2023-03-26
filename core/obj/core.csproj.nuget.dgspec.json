@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/godwinonah/Documents/bagshop/BagShop/core/core.csproj": {}
+    "/Users/godwinonah/Documents/BagProject/BagShop-API/core/core.csproj": {}
   },
   "projects": {
-    "/Users/godwinonah/Documents/bagshop/BagShop/core/core.csproj": {
+    "/Users/godwinonah/Documents/BagProject/BagShop-API/core/core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/godwinonah/Documents/bagshop/BagShop/core/core.csproj",
+        "projectUniqueName": "/Users/godwinonah/Documents/BagProject/BagShop-API/core/core.csproj",
         "projectName": "core",
-        "projectPath": "/Users/godwinonah/Documents/bagshop/BagShop/core/core.csproj",
+        "projectPath": "/Users/godwinonah/Documents/BagProject/BagShop-API/core/core.csproj",
         "packagesPath": "/Users/godwinonah/.nuget/packages/",
-        "outputPath": "/Users/godwinonah/Documents/bagshop/BagShop/core/obj/",
+        "outputPath": "/Users/godwinonah/Documents/BagProject/BagShop-API/core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/godwinonah/.nuget/NuGet/NuGet.Config"
@@ -61,11 +61,11 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
+              "version": "[6.0.14, 6.0.14]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
+              "version": "[6.0.14, 6.0.14]"
             }
           ],
           "frameworkReferences": {
@@ -73,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }

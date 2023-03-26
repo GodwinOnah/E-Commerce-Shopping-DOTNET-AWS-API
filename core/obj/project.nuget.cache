@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XdS/YLqszkj/imRprkVjH5xOU+Q6Ha89pJDTFzbZPbPW4BDR/vDeZGtbOJcg9vePJO3vRhQRpEFEym297RCeNw==",
+  "dgSpecHash": "QU1Xi2rSr9m8fEtVkuvibXFZ3SI+EtDxCn16S0Rj7M7mF9GssjPC+2yU5QFUsU+ugIB2UQxUhwQ79ooccs8AVg==",
   "success": true,
-  "projectFilePath": "/Users/godwinonah/Documents/bagshop/BagShop/core/core.csproj",
+  "projectFilePath": "/Users/godwinonah/Documents/BagProject/BagShop-API/core/core.csproj",
   "expectedPackageFiles": [
     "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.cryptography.internal/6.0.13/microsoft.aspnetcore.cryptography.internal.6.0.13.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/6.0.13/microsoft.aspnetcore.cryptography.keyderivation.6.0.13.nupkg.sha512",
@@ -26,8 +26,8 @@
     "/Users/godwinonah/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.diagnostics.diagnosticsource/6.0.0/system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.11/microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512",
-    "/Users/godwinonah/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512"
+    "/Users/godwinonah/.nuget/packages/microsoft.netcore.app.ref/6.0.14/microsoft.netcore.app.ref.6.0.14.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.14/microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512"
   ],
   "logs": []
 }
