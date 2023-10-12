@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oxcFRNmlXOpKtNAhsJAC42XT4hO4bUELKiUS/j+nxK1cCnr1RhiT52OKoP4a9rPajv72SGG4j+UxejmgrMt5iw==",
+  "dgSpecHash": "BSMyrv+wNtEDIVAOTYJsuwfQbU81YnAPPYJ72lpyhp/MjLVv/do8ElYqw21OSzOIxNb4vr1ucVHisdRN9bvo9g==",
   "success": true,
-  "projectFilePath": "/Users/godwinonah/Documents/TheBags/infrastructure/infrastructure.csproj",
+  "projectFilePath": "/Users/godwinonah/Documents/BagShop-API/infrastructure/infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/godwinonah/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.aspnetcore.authentication/2.2.0/microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
