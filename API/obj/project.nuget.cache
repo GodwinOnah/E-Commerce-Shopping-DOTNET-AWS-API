@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yqAjD/XT7yEWSUoOttNifX2pRG0Ls+tGpGM8TPDQ/lbPXPqDlDHikwb2e8s2Mo85ltVo+fTL/IXWlPKmRCKcNw==",
+  "dgSpecHash": "0KxDOMu54XOqyNfEVGSacCGuLinxeRKLVKiTDsym8b0z3dAp9Oh8UZr5sRs2sifMmli4S1FBsmgkNTpiUr2XFw==",
   "success": true,
-  "projectFilePath": "/Users/godwinonah/Documents/TheBags/API/API.csproj",
+  "projectFilePath": "/Users/godwinonah/Documents/BagShop-API/API/API.csproj",
   "expectedPackageFiles": [
     "/Users/godwinonah/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

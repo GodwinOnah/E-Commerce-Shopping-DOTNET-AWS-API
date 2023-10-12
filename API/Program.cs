@@ -87,11 +87,6 @@ builder.Services.Configure<ApiBehaviorOptions>(option =>
     return new BadRequestObjectResult(errorResponese);
 });
 
-// if (env.IsDevelopment())
-//   {
-//     app.UseDeveloperExceptionPage();
-//   }  
-
 var app = builder.Build();
 app.UseMiddleware<ErrorMiddleWare>();
 app.UseStatusCodePagesWithReExecute("/error/{0}");//use for redirecting error not handle by Error controllers

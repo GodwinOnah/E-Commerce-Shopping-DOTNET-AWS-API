@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/godwinonah/Documents/TheBags/API/API.csproj": {}
+    "/Users/godwinonah/Documents/BagShop-API/API/API.csproj": {}
   },
   "projects": {
-    "/Users/godwinonah/Documents/TheBags/API/API.csproj": {
+    "/Users/godwinonah/Documents/BagShop-API/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/godwinonah/Documents/TheBags/API/API.csproj",
+        "projectUniqueName": "/Users/godwinonah/Documents/BagShop-API/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/Users/godwinonah/Documents/TheBags/API/API.csproj",
+        "projectPath": "/Users/godwinonah/Documents/BagShop-API/API/API.csproj",
         "packagesPath": "/Users/godwinonah/.nuget/packages/",
-        "outputPath": "/Users/godwinonah/Documents/TheBags/API/obj/",
+        "outputPath": "/Users/godwinonah/Documents/BagShop-API/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/godwinonah/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/godwinonah/Documents/TheBags/infrastructure/infrastructure.csproj": {
-                "projectPath": "/Users/godwinonah/Documents/TheBags/infrastructure/infrastructure.csproj"
+              "/Users/godwinonah/Documents/BagShop-API/infrastructure/infrastructure.csproj": {
+                "projectPath": "/Users/godwinonah/Documents/BagShop-API/infrastructure/infrastructure.csproj"
               }
             }
           }
@@ -88,14 +88,14 @@
         }
       }
     },
-    "/Users/godwinonah/Documents/TheBags/core/core.csproj": {
+    "/Users/godwinonah/Documents/BagShop-API/core/core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/godwinonah/Documents/TheBags/core/core.csproj",
+        "projectUniqueName": "/Users/godwinonah/Documents/BagShop-API/core/core.csproj",
         "projectName": "core",
-        "projectPath": "/Users/godwinonah/Documents/TheBags/core/core.csproj",
+        "projectPath": "/Users/godwinonah/Documents/BagShop-API/core/core.csproj",
         "packagesPath": "/Users/godwinonah/.nuget/packages/",
-        "outputPath": "/Users/godwinonah/Documents/TheBags/core/obj/",
+        "outputPath": "/Users/godwinonah/Documents/BagShop-API/core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/godwinonah/.nuget/NuGet/NuGet.Config"
@@ -151,14 +151,14 @@
         }
       }
     },
-    "/Users/godwinonah/Documents/TheBags/infrastructure/infrastructure.csproj": {
+    "/Users/godwinonah/Documents/BagShop-API/infrastructure/infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/godwinonah/Documents/TheBags/infrastructure/infrastructure.csproj",
+        "projectUniqueName": "/Users/godwinonah/Documents/BagShop-API/infrastructure/infrastructure.csproj",
         "projectName": "infrastructure",
-        "projectPath": "/Users/godwinonah/Documents/TheBags/infrastructure/infrastructure.csproj",
+        "projectPath": "/Users/godwinonah/Documents/BagShop-API/infrastructure/infrastructure.csproj",
         "packagesPath": "/Users/godwinonah/.nuget/packages/",
-        "outputPath": "/Users/godwinonah/Documents/TheBags/infrastructure/obj/",
+        "outputPath": "/Users/godwinonah/Documents/BagShop-API/infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/godwinonah/.nuget/NuGet/NuGet.Config"
@@ -173,8 +173,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/godwinonah/Documents/TheBags/core/core.csproj": {
-                "projectPath": "/Users/godwinonah/Documents/TheBags/core/core.csproj"
+              "/Users/godwinonah/Documents/BagShop-API/core/core.csproj": {
+                "projectPath": "/Users/godwinonah/Documents/BagShop-API/core/core.csproj"
               }
             }
           }
