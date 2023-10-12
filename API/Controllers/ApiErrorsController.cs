@@ -1,18 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using API.ErrorsHandlers;
 using infrastructure.data;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
     public class ApiErrorsController: ApiControllerBase
     {
-        private readonly storeProducts _context;
-        public ApiErrorsController(storeProducts context)
+        private readonly productContext _context;
+        public ApiErrorsController(productContext context)
         {
             _context = context;
         }

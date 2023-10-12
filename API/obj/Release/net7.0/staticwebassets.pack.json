@@ -1,0 +1,121 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/207.js",
+      "PackagePath": "staticwebassets/207.js"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/314.js",
+      "PackagePath": "staticwebassets/314.js"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/346.js",
+      "PackagePath": "staticwebassets/346.js"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/3rdpartylicenses.txt",
+      "PackagePath": "staticwebassets/3rdpartylicenses.txt"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/441.js",
+      "PackagePath": "staticwebassets/441.js"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/466.js",
+      "PackagePath": "staticwebassets/466.js"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/assets/ObandeLogo.jpeg",
+      "PackagePath": "staticwebassets/assets/ObandeLogo.jpeg"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/assets/bagsale1.jpeg",
+      "PackagePath": "staticwebassets/assets/bagsale1.jpeg"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/assets/bagsale2.jpeg",
+      "PackagePath": "staticwebassets/assets/bagsale2.jpeg"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/assets/bagsale3.jpeg",
+      "PackagePath": "staticwebassets/assets/bagsale3.jpeg"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/assets/bagsale4.jpeg",
+      "PackagePath": "staticwebassets/assets/bagsale4.jpeg"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/assets/beach.jpeg",
+      "PackagePath": "staticwebassets/assets/beach.jpeg"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/assets/can-fit4.gif",
+      "PackagePath": "staticwebassets/assets/can-fit4.gif"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/common.js",
+      "PackagePath": "staticwebassets/common.js"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets/fontawesome-webfont.eot"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets/fontawesome-webfont.svg"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets/fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets/fontawesome-webfont.woff"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets/fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/main.js",
+      "PackagePath": "staticwebassets/main.js"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/polyfills.js",
+      "PackagePath": "staticwebassets/polyfills.js"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/runtime.js",
+      "PackagePath": "staticwebassets/runtime.js"
+    },
+    {
+      "Id": "/Users/godwinonah/Documents/TheBags/API/wwwroot/styles.css",
+      "PackagePath": "staticwebassets/styles.css"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.build.API.props",
+      "PackagePath": "build\\API.props"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.buildMultiTargeting.API.props",
+      "PackagePath": "buildMultiTargeting\\API.props"
+    },
+    {
+      "Id": "obj/Release/net7.0/staticwebassets/msbuild.buildTransitive.API.props",
+      "PackagePath": "buildTransitive\\API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

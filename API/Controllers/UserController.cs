@@ -6,8 +6,7 @@ using AutoMapper;
 using core.Entities.Identity;
 using core.Interfaces;
 using API.DTOs;
-using Microsoft.AspNetCore.Authorization;
-using System.Security.Claims;
+using core.Entities.DTOs;
 
 namespace API.Controllers
 {
@@ -28,87 +27,109 @@ namespace API.Controllers
         }
 
         // Use to get a new user
-        
-        [HttpGet]
         // [Authorize]
-        public async Task<ActionResult<UserDTO>> GetCurrentUser(){
-            // Console.WriteLine("\n\n\n\n"+User+"\n\n\n\n");     
+        [HttpGet]
+        public async Task<ActionResult<UserDTO>> GetCurrentUser(){  
             var user = await _userManager.FindByEmailByClaimPrinciple(User);
-            Console.WriteLine("\n\n\n\n"+user+57+"\n\n\n\n");
             return new UserDTO {
-                nickName = user.nickName,
-                email = user.Email,
-                token =  _tokenService.createToken(user)
+                NickName = user.NickName,
+                Email = user.Email,
+                Token =  _tokenService.createToken(user)
             };}
 
         // [Authorize]
         [HttpGet("address")]
         public async Task<ActionResult<AddressDTO>> GetAddress(){
-            var user = await _userManager.FindUserByClaimPrincipleWIthAddress(User);
-            // user null, therefore causing system error
-            // Console.WriteLine("\n\n\n\n"+user+66+"\n\n\n\n");
+            var user = await _userManager.FindUserByClaimsPrincipleWithAddress(User);
             return _mapper.Map<Address,AddressDTO>(user.address);
             }
 
-        // [Authorize]
+      
         [HttpPut("address")]
         public async Task<ActionResult<AddressDTO>> UpdateAddress(AddressDTO addressDTO){
-            var user = await _userManager.FindUserByClaimPrincipleWIthAddress(HttpContext.User);
+            var user = await _userManager.FindUserByClaimsPrincipleWithAddress(User);
             user.address = _mapper.Map<AddressDTO,Address>(addressDTO);
             var result = await _userManager.UpdateAsync(user);
-            if(!result.Succeeded) return Ok(_mapper.Map<Address,AddressDTO>(user.address));
+            if(result.Succeeded) 
+            return Ok(_mapper.Map< Address,AddressDTO>(user.address));
             return BadRequest("Could not update user");
             }
         
         // Check if Email Exist
          [HttpGet("emailexist")]
         public async Task<ActionResult<bool>> CheckEmail([FromQuery] string email){             
-                return await _userManager.FindByEmailAsync(email)!=null;
+            return await _userManager.FindByEmailAsync(email)!=null;
         }
 
-        // Use for login
-        // [Authorize]
+    
          [HttpPost("login")]
         public async Task<ActionResult<UserDTO>> Login(LoginDTO loginDTO){                  
             var user = await _userManager.FindByEmailAsync(loginDTO.email);
-            if(user == null) return Unauthorized(new Responses(401));
+
+            if(user == null) 
+            return Unauthorized(new Responses(401));
+
             var result = await  _signInManager.CheckPasswordSignInAsync(user,loginDTO.password,false);
+            
             if(!result.Succeeded) return Unauthorized(new Responses(401));
             return new UserDTO {
-                nickName = user.nickName,
-                email = user.Email,
-                token =  _tokenService.createToken(user)
+                NickName = user.NickName,
+                Email = user.Email,
+                Token =  _tokenService.createToken(user)
             };}
+
+        [HttpPut("forgotpasswrd")]
+        public async Task<ActionResult<UserDTO>> UpdatePassword(ForgotPassDetail  forgotPassDetail){  
+            var user = await _userManager.FindByEmailAsync(forgotPassDetail.Email);
+            if(user == null) 
+            return Unauthorized(new Responses(401));    
+            if(forgotPassDetail.Password1 == forgotPassDetail.Password2){
+            user.PasswordHash = _userManager.PasswordHasher.HashPassword(user,forgotPassDetail.Password1);
+             var result = await _userManager.UpdateAsync(user);
+             
+            if(!result.Succeeded) return Unauthorized(new Responses(401));
+            return new UserDTO {
+                NickName = user.NickName,
+                Email = user.Email,
+                Token =  _tokenService.createToken(user)
+            };
+            } 
+            else{
+                return Unauthorized(new Responses(401));
+            }}     
       
     //   Use to register a new customer
         [HttpPost("register")]
         public async Task<ActionResult<UserDTO>> Register(RegisterDTO registerDTO){  
-            if(CheckEmail(registerDTO.Email).Result.Value)
+            if(CheckEmail(registerDTO.email).Result.Value)
             {
                 return new BadRequestObjectResult(
                     new ValidationErrors{Errors = 
                     new [] {"Sorry!!..Email already in use"}});
             }
-
              var user = new User{
-                        nickName = registerDTO.NickName,
-                        Email = registerDTO.Email,
-                        UserName = registerDTO.Email,
-                            address = new Address{
-                                    FirstName=registerDTO.FirstName,
-                                    MiddleName=registerDTO.MiddleName,
-                                    LastName=registerDTO.LastName,
-                                    Street=registerDTO.Street,
-                                    City=registerDTO.City,
-                                    Country=registerDTO.Country,
-                                    Zipcode=registerDTO.Zipcode,
-                                    Phone=registerDTO.Phone
+                        NickName = registerDTO.nickName,
+                        Email = registerDTO.email,
+                        UserName = registerDTO.email,
+                        address = new Address{
+                                    firstName=registerDTO.firstName,
+                                    middleName=registerDTO.middleName,
+                                    lastName=registerDTO.lastName,
+                                    street=registerDTO.street,
+                                    city=registerDTO.city,
+                                    country=registerDTO.country,
+                                    zipcode=registerDTO.zipcode,
+                                    phone=registerDTO.phone
                         }};
-                
-            var result = await _userManager.CreateAsync(user, registerDTO.Password);       
+            if(registerDTO.password1 == registerDTO.password2){
+            var result = await _userManager.CreateAsync(user, registerDTO.password1);
+
             if(!result.Succeeded) return Unauthorized(new Responses(401));
             return new UserDTO {
-                nickName = user.nickName,
-                email = user.Email,
-                token = _tokenService.createToken(user)    
-            };}}}
+                NickName = user.NickName,
+                Email = user.Email,
+                Token = _tokenService.createToken(user)    
+            };}
+            else{
+                 return Unauthorized(new Responses(401));
+            }}}}

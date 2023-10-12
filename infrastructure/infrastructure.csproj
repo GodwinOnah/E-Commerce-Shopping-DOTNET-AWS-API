@@ -1,23 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
+ 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.9" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.27.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.4" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+   <PackageReference Include="StackExchange.Redis" Version="2.6.90" />
+   <PackageReference Include="Stripe.net" Version="41.6.0" />
+   <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.27.0" />
+  </ItemGroup>
+
+   <ItemGroup>
+    <None Include="data\ProductsData\**" CopyToOutputDirectory="PreserveNewest" />
     <ProjectReference Include="..\core\core.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.0" />
-    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.26.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-    <!-- <PackageReference Include="Newtonsoft.Json" Version="13.0.1" /> -->
-   <PackageReference Include="StackExchange.Redis" Version="2.6.90" />
-   <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.26.0" />
-   <PackageReference Include="System.Text.Json" Version="7.0.1" />
-  </ItemGroup>
+  
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
   </PropertyGroup>

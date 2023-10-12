@@ -1,11 +1,9 @@
-using Newtonsoft.Json;
-
 namespace core
 { 
    
     public class BasketItems
     {
-        public int productId {get; set;}
+        public int id {get; set;}
         public string prodName {get; set;}
         
         public string prodPicture {get; set;}

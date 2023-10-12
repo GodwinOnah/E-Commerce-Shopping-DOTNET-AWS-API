@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using core.Controllers;
 using core.Interfaces;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace infrastructure.data
@@ -11,10 +8,10 @@ namespace infrastructure.data
     public class ProductRepo : IProductInterface
 
     {
-        private readonly storeProducts _products;
+        private readonly productContext _products;
 
       
-        public ProductRepo(storeProducts products)
+        public ProductRepo(productContext products)
         {
             _products = products;
         }

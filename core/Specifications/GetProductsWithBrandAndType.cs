@@ -1,15 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
 using core.Controllers;
-using core.Entities;
 using infrastructure.data;
 
 namespace core.Specifications
 {
-    public class GetProductsWithBrandAndType : ProductSpecification<Products>
+    public class GetProductsWithBrandAndType : Specification<Products>
     {
         public GetProductsWithBrandAndType(ProductParameters parameters):
         base(x=>
@@ -39,15 +33,12 @@ namespace core.Specifications
                     default:
                     AddOrderBy(x=>x.prodName);  
                     break;
-
                 }
-
-            } 
-        
+            }         
         }
 
         public GetProductsWithBrandAndType(int id) :
-         base(x=>x.productId==id/*Filtering into a single product*/)
+         base(x=>x.id==id/*Filtering into a single product*/)
         {
             AddProdInclude(x=>x.productBrand);
             AddProdInclude(x=>x.productType);  

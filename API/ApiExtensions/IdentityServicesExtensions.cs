@@ -13,12 +13,18 @@ namespace API.ApiExtensions
             this IServiceCollection services,IConfiguration config)
         {
 
-            services.AddDbContext<UserIdentityDbContext>(opt=>
-                        {
-                            opt.UseSqlite(config.GetConnectionString("IdentityConnection"), 
-                            b => b.MigrationsAssembly("infrastructure"));                        
-                        });
+            // services.AddDbContext<UserIdentityDbContext>(opt=>
+            //             {
+            //                 opt.UseNpgsql(config.GetConnectionString("IdentityConnection"), 
+            //                 b => b.MigrationsAssembly("infrastructure"));                        
+            //             });
 
+            services.AddDbContext<UserIdentityDbContext>(
+                x=> {x.UseMySql(config
+                .GetConnectionString("DefaultConnection"),
+                new MySqlServerVersion(new Version()),
+                b => b.MigrationsAssembly("infrastructure")
+                );});
 
             services.AddIdentityCore<User>(opt=>{})
                         .AddEntityFrameworkStores<UserIdentityDbContext>()

@@ -1,12 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using core.Entities;
-
 namespace core.Interfaces
 {
-    public interface IgenericProductInterface<T> where T : ProductEntities
+    public interface IgenericInterfaceRepository<T> 
     {
         Task<T> GetProductsByIdAdsync(int id);
 
@@ -17,5 +11,9 @@ namespace core.Interfaces
          Task<IReadOnlyList<T>> ListAllAsync(ISpecificationProducts<T> specification);
 
          Task<int> CountPage(ISpecificationProducts<T> specification);
+
+         void Add(T entity);
+          void Update(T entity);
+           void Delete(T entity);
     }
 }

@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "delName": "Patience",
+      "delTime": "4 days",
+      "delPrice": 1,
+      "delDescription": "Distance more than 10km"
+    },
+    {
+      "id": 2,
+      "delName": "Rightly",
+      "delTime": "2 days",
+      "delPrice": 1.5,
+      "delDescription": "Short distance within 10Km"
+    },
+    {
+      "id": 3,
+      "delName": "Prada_delivery",
+      "delTime": "7 days",
+      "delPrice": 0.5,
+      "delDescription": "Distance above 50km"
+    },
+    {
+      "id": 4,
+      "delName": "Express",
+      "delTime": "1 day",
+      "delPrice": 2.5,
+      "delDescription": "Urgent delivery"
+    }
+  ]

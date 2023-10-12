@@ -1,10 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json;
-using System.Threading.Tasks;
 using API.DTOs;
-using API.Helper;
 using AutoMapper;
 using core;
 using core.Interfaces;
@@ -27,8 +21,7 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<Basket>> GetBasketById(string id){
 
-            var basket= await _basket.GetBasketAsync(id);
-            
+            var basket= await _basket.GetBasketAsync(id);           
             return Ok(basket ?? new Basket(id));
 
         }
@@ -36,6 +29,7 @@ namespace API.Controllers
         [HttpPost]
         public async Task<ActionResult<Basket>> UpdateBasket(BasketDTO basketDTO)
         { 
+    
             var basket =  _mapper.Map<BasketDTO,Basket>(basketDTO);
             var update = await  _basket.UpdateBasketAsync(basket);
             return Ok(update);

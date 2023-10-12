@@ -1,30 +1,22 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using core.Controllers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace infrastructure.data.Configurations
+namespace Infrastructure.Data.Config
 {
     public class ProductPropertiesConfig : IEntityTypeConfiguration<Products>
     {
         public void Configure(EntityTypeBuilder<Products> builder)
         {
-            builder.Property(x=>x.prodPicture).IsRequired();
-
-            builder.Property(x=>x.prodDescription).IsRequired().HasMaxLength(200);
-
-            builder.Property(x=>x.prodName).IsRequired().HasMaxLength(15);
-
-            builder.Property(x=>x.prodPrice).HasColumnType("decimal(10,2)");
-
-            builder.HasOne(x=>x.productBrand).WithMany().
-            HasForeignKey(x=>x.productBrandId);
-
-            builder.HasOne(x=>x.productType).WithMany().
-            HasForeignKey(x=>x.productTypeId);
+            builder.Property(p => p.id).IsRequired();
+            builder.Property(p => p.prodName).IsRequired().HasMaxLength(100);
+            builder.Property(p => p.prodDescription).IsRequired();
+            builder.Property(p => p.prodPrice).HasColumnType("decimal(18,2)");
+            builder.Property(p => p.prodPicture).IsRequired();
+            builder.HasOne(p => p.productBrand).WithMany()
+                .HasForeignKey(p => p.productBrandId);
+            builder.HasOne(p => p.productType).WithMany()
+                .HasForeignKey(p => p.productTypeId);
         }
     }
 }

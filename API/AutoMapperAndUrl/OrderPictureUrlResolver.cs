@@ -1,10 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using API.DTOs;
 using AutoMapper;
 using core.Entities.Oders;
+
 
 namespace API.AutoMapperAndUrl
 {
@@ -18,10 +15,10 @@ namespace API.AutoMapperAndUrl
 
         public string Resolve(ItemOrdered source, ItemOrderedDTO destination, string destMember, ResolutionContext context)
         {
-            if(!string.IsNullOrEmpty(source.itemOrdered.prodPicture))
+            if(!string.IsNullOrEmpty(source.productOrdered.prodPicture))
             {
 
-                return _configuration["ApiUrl"]+source.itemOrdered.prodPicture;
+                return _configuration["ApiUrl"]+source.productOrdered.prodPicture;
             }
 
             return null;

@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using core;
-using core.Entities;
 using core.Interfaces;
 using Newtonsoft.Json;
 using StackExchange.Redis;
@@ -35,7 +30,7 @@ namespace infrastructure.data
         {
 
             var updated = await  _database.StringSetAsync(basket.Id, 
-                   JsonConvert.SerializeObject(basket),TimeSpan.FromDays(30));
+                JsonConvert.SerializeObject(basket),TimeSpan.FromDays(30));
    
                 if(!updated)  return null;
   
