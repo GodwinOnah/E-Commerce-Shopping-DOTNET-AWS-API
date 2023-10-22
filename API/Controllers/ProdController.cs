@@ -13,7 +13,7 @@ namespace API.Controllers
 {
 
    
-    public class ProdController: ApiControllerBase
+    public class ProductsController: ApiControllerBase
     {
         private readonly IgenericInterfaceRepository<Products> _products;
         private readonly IgenericInterfaceRepository<ProductBrand> _productBrands;
@@ -25,7 +25,7 @@ namespace API.Controllers
          private readonly IMapper _imapper;
           private readonly IWebHostEnvironment  _webhost;
         
-        public ProdController(
+        public ProductsController(
             IgenericInterfaceRepository<Products> products,
             IgenericInterfaceRepository<ProductBrand> productBrands,
             IgenericInterfaceRepository<ProductType> productTypes,

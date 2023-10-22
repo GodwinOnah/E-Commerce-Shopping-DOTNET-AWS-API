@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using infrastructure.data;
 
@@ -16,8 +17,10 @@ namespace infrastructure.Migrations.Products
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.9")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+                .HasAnnotation("ProductVersion", "7.0.12")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("core.Controllers.ProductBrand", b =>
                 {
@@ -25,8 +28,10 @@ namespace infrastructure.Migrations.Products
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
                     b.Property<string>("Name")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
@@ -39,8 +44,10 @@ namespace infrastructure.Migrations.Products
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
                     b.Property<string>("Name")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
@@ -53,18 +60,20 @@ namespace infrastructure.Migrations.Products
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
                     b.Property<string>("prodDescription")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("prodName")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("prodPicture")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("prodPrice")
                         .HasColumnType("decimal(18,2)");
@@ -90,11 +99,13 @@ namespace infrastructure.Migrations.Products
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
                     b.Property<string>("advert")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("time")
-                        .HasColumnType("decimal(65,30)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("id");
 
@@ -107,24 +118,26 @@ namespace infrastructure.Migrations.Products
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
                     b.Property<string>("Email")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("adminOrderId")
                         .HasColumnType("int");
 
                     b.Property<string>("confirmation")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("deliveryid")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("orderDate")
-                        .HasColumnType("datetime");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("orderStatus")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
@@ -139,17 +152,19 @@ namespace infrastructure.Migrations.Products
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
                     b.Property<string>("delDescription")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("delName")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("delPrice")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("delTime")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
@@ -161,6 +176,8 @@ namespace infrastructure.Migrations.Products
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
                     b.Property<int?>("AdminOrderid")
                         .HasColumnType("int");
@@ -189,27 +206,29 @@ namespace infrastructure.Migrations.Products
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
                     b.Property<string>("Email")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("confirmation")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("deliveryid")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("orderDate")
-                        .HasColumnType("datetime");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("orderStatus")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("paymentIntentId")
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("subTotal")
-                        .HasColumnType("decimal(65,30)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("id");
 
@@ -249,28 +268,28 @@ namespace infrastructure.Migrations.Products
                                 .HasColumnType("int");
 
                             b1.Property<string>("city")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<string>("country")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<string>("firstName")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<string>("lastName")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<string>("middleName")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<string>("phone")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<string>("street")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<string>("zipcode")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.HasKey("AdminOrderid");
 
@@ -307,10 +326,10 @@ namespace infrastructure.Migrations.Products
                                 .HasColumnType("int");
 
                             b1.Property<string>("prodName")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<string>("prodPicture")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.HasKey("ItemOrderedid");
 
@@ -335,28 +354,28 @@ namespace infrastructure.Migrations.Products
                                 .HasColumnType("int");
 
                             b1.Property<string>("city")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<string>("country")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<string>("firstName")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<string>("lastName")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<string>("middleName")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<string>("phone")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<string>("street")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.Property<string>("zipcode")
-                                .HasColumnType("longtext");
+                                .HasColumnType("nvarchar(max)");
 
                             b1.HasKey("Orderid");
 

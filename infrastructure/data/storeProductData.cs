@@ -13,7 +13,7 @@ namespace infrastructure.data
             
             try{
 
-                //This code read files, serialize them and save them to database
+            //This code read files, serialize them and save them to database
 
             //     var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 

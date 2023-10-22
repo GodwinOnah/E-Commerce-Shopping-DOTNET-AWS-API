@@ -20,11 +20,12 @@ namespace API.ApiExtensions
             //             });
 
             services.AddDbContext<UserIdentityDbContext>(
-                x=> {x.UseMySql(config
+                x=>
+                {x.UseSqlServer(config
                 .GetConnectionString("DefaultConnection"),
-                new MySqlServerVersion(new Version()),
-                b => b.MigrationsAssembly("infrastructure")
-                );});
+                b => b.MigrationsAssembly("infrastructure")); 
+                
+                });
 
             services.AddIdentityCore<User>(opt=>{})
                         .AddEntityFrameworkStores<UserIdentityDbContext>()
@@ -32,17 +33,16 @@ namespace API.ApiExtensions
 
             
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                        .AddJwtBearer(opt=>{opt.TokenValidationParameters
-                         = new TokenValidationParameters {
-
-                            ValidateIssuerSigningKey = true,
-                            IssuerSigningKey = new SymmetricSecurityKey(
-                                                Encoding.UTF8.GetBytes(config["Token:key"])),
+                        .AddJwtBearer(opt=>
+                        {opt.TokenValidationParameters
+                         = new TokenValidationParameters 
+                         {  ValidateIssuerSigningKey = true,
+                            IssuerSigningKey = 
+                            new SymmetricSecurityKey
+                            (Encoding.UTF8.GetBytes(config["Token:key"])),
                             ValidateIssuer = true,
                             ValidIssuer = config["Token:Issuer"],
-                            ValidateAudience = false
-                            
-                            
+                            ValidateAudience = false                           
                         };});
                         
             services.AddAuthorization();

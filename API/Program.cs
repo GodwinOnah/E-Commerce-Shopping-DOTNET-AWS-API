@@ -1,5 +1,3 @@
-
-
 using API.ApiErrorMiddleWares;
 using API.ApiExtensions;
 using API.AutoMapper;
@@ -31,16 +29,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 
-// builder.Services.AddDbContext<productContext>(
-//                 x=>x.UseNpgsql(builder.Configuration
-//                 .GetConnectionString("DefaultConnection"),
-//                 x => x.MigrationsHistoryTable("_EFMigrationsHistory")));
 
 builder.Services.AddDbContext<productContext>(
-                x=>x.UseMySql(builder.Configuration
+                x=>x.UseSqlServer(builder.Configuration
                 .GetConnectionString("DefaultConnection"),
-                new MySqlServerVersion(new Version()),
-                b => b.MigrationsAssembly("infrastructure")));
+                 options => options.EnableRetryOnFailure()
+                ));
 
 builder.Services.AddSingleton<IConnectionMultiplexer>(c => {
                 var configuration = ConfigurationOptions
@@ -74,6 +68,7 @@ builder.Services.AddCors(option=>
 ));
 
 builder.Services.Configure<ApiBehaviorOptions>(option =>
+
         option.InvalidModelStateResponseFactory = actionContext => {
 
         var errors = actionContext.ModelState
@@ -120,8 +115,8 @@ app.UseAuthorization();
 app.MapControllers();
 app.MapFallbackToController("index","fallback");
 //this code creates the databases
-using (var scope=app.Services.CreateScope()){//Contains all database configurations to create migrations
-    var services=scope.ServiceProvider;
+using (var scope = app.Services.CreateScope()){//Contains all database configurations to create migrations
+    var services = scope.ServiceProvider;
     var loggerFactory=services.GetRequiredService<ILoggerFactory>();
      var context=services.GetRequiredService<productContext>();
       var identityContext=services.GetRequiredService<UserIdentityDbContext>();
