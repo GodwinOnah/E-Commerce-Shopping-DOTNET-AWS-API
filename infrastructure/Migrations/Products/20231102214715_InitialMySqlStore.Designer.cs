@@ -12,7 +12,7 @@ using infrastructure.data;
 namespace infrastructure.Migrations.Products
 {
     [DbContext(typeof(productContext))]
-    [Migration("20231021203823_InitialMySqlStore")]
+    [Migration("20231102214715_InitialMySqlStore")]
     partial class InitialMySqlStore
     {
         /// <inheritdoc />

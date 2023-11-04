@@ -5,10 +5,10 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,
-      "applicationUrl": "bagshopclientapi.azurewebsites.net",
+      "applicationUrl": "bagshopstoreapi.azurewebsites.net",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "JWT_SECRET":"This is my secrete keybagshopclientapi.azurewebsites.nethttps://localhost:5000"
+        "JWT_SECRET":"This is my secret key"
       }
     }
   }

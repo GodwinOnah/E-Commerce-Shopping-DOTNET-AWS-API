@@ -12,7 +12,7 @@ using core.Entities.Identity;
 namespace infrastructure.Migrations.UserIdentity
 {
     [DbContext(typeof(UserIdentityDbContext))]
-    [Migration("20231021204221_InitialMySqlIdentity")]
+    [Migration("20231102214709_InitialMySqlIdentity")]
     partial class InitialMySqlIdentity
     {
         /// <inheritdoc />

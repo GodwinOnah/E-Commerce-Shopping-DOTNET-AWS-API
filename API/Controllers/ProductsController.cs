@@ -48,7 +48,7 @@ namespace API.Controllers
         {                   
             var productDetailsFormated = new ProductDetails(){
                     prodName = productsDetails.prodName,
-                    prodPicture = "/bags/"+productsDetails.prodPicture.Substring(12),
+                    prodPicture ="/bags/"+productsDetails.prodPicture.Substring(12) ,
                     prodDescription = productsDetails.prodDescription,
                     prodPrice = productsDetails.prodPrice,
                     productBrandId = productsDetails.productBrandId,
@@ -87,6 +87,7 @@ namespace API.Controllers
                await _productDetails.DeleteProductAsync(id);
                 return true;             
         }  
+
         // [Cashing(600)]
         [HttpGet]
         public async Task<ActionResult<ProductsPagination<ProductsShapedObject>>> GetProducts(
@@ -118,7 +119,7 @@ namespace API.Controllers
         [HttpGet("brands")] //No curly braces
         public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetProductBrand()
         {
-            var productBrandList=await _productBrands.ListAllAsync();          
+            var productBrandList = await _productBrands.ListAllAsync();          
             return Ok(productBrandList);
         }
 
@@ -129,5 +130,7 @@ namespace API.Controllers
             var productTypeList = await _productTypes.ListAllAsync();
              return Ok(productTypeList);
         }   
+
+       
 }
 }

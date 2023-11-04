@@ -13,8 +13,6 @@ namespace core.Entities.DTOs
         public string  orderStatus {get; set;}
         public DateTime  orderDate {get; set;}
         public  Delivery  delivery {get; set;}
-        public string confirmation {get; set;}
-        
-        
+        public string confirmation {get; set;}     
     }
 }

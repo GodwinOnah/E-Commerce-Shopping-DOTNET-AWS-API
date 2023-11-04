@@ -30,7 +30,6 @@ namespace API.Controllers
          [HttpPost("webhook")]
          public async Task<ActionResult> StripeWebhook(){
 
-
             Console.WriteLine("\n\n\n\n\n\n\n\n LOVE u 33 \n\n\n\n\n\n\n\n");
 
             var json = await new StreamReader(Request.Body).ReadToEndAsync();

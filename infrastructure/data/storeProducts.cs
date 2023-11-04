@@ -10,6 +10,7 @@ namespace infrastructure.data
     {
         public productContext(DbContextOptions<productContext> options) : base(options)
         {
+          
             Database.EnsureCreated();
         }
         public DbSet<Products> Products { get; set; }
