@@ -38,15 +38,5 @@ namespace API.AutoMapper
                .ForMember(d=>d.prodName,o=>o.MapFrom(s=>s.productOrdered.prodName))
                .ForMember(d=>d.prodPicture,o=>o.MapFrom(s=>s.productOrdered.prodPicture))
                .ForMember(x=>x.prodPicture,y=>y.MapFrom<OrderPictureUrlResolver>());
-
-            //    CreateMap<ProductDetails, Products>()
-            //    .ForMember(d=>d.prodName,o=>o.MapFrom(s=>s.prodName))
-            //     .ForMember(d=>d.prodPicture,o=>o.MapFrom(s=>s.prodPicture))
-            //     .ForMember(d=>d.prodDescription,o=>o.MapFrom(s=>s.prodDescription))
-            //      .ForMember(d=>d.prodPrice,o=>o.MapFrom(s=>s.prodPrice))
-            //       .ForMember(d=>d.productBrand.Name,o=>o.MapFrom(s=>s.productBrand))
-            //        .ForMember(d=>d.productType.Name,o=>o.MapFrom(s=>s.productType));
-               
-         }
     }
-}
+}}

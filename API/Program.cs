@@ -29,7 +29,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 
+//Database configuration for PostgreSQL server
+// builder.Services.AddDbContext<productContext>(
+//                 x=>x.UseNpgsql(builder.Configuration
+//                 .GetConnectionString("DefaultConnection"),
+//                 x => x.MigrationsHistoryTable("_EFMigrationsHistory")));
 
+//Database configuration for SQL server
 builder.Services.AddDbContext<productContext>(
                 x=>x.UseSqlServer(builder.Configuration
                 .GetConnectionString("DefaultConnection"),
@@ -41,6 +47,7 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(c => {
                 .Parse(builder.Configuration.GetConnectionString("Redis"),true);
                 return ConnectionMultiplexer.Connect(configuration);
                 });
+
 builder.Services.AddSingleton<ICashing,CashingService>();
 builder.Services.AddIdentityService(builder.Configuration);
 builder.Services.AddSwaggerDocumentation();
