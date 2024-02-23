@@ -34,3 +34,15 @@
 /Users/godwinonah/Documents/BagShop-API/core/obj/Debug/net7.0/refint/core.dll
 /Users/godwinonah/Documents/BagShop-API/core/obj/Debug/net7.0/core.pdb
 /Users/godwinonah/Documents/BagShop-API/core/obj/Debug/net7.0/ref/core.dll
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/bin/Debug/net7.0/core.deps.json
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/bin/Debug/net7.0/core.dll
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/bin/Debug/net7.0/core.pdb
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/obj/Debug/net7.0/core.csproj.AssemblyReference.cache
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/obj/Debug/net7.0/core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/obj/Debug/net7.0/core.AssemblyInfoInputs.cache
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/obj/Debug/net7.0/core.AssemblyInfo.cs
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/obj/Debug/net7.0/core.csproj.CoreCompileInputs.cache
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/obj/Debug/net7.0/core.dll
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/obj/Debug/net7.0/refint/core.dll
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/obj/Debug/net7.0/core.pdb
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/obj/Debug/net7.0/ref/core.dll

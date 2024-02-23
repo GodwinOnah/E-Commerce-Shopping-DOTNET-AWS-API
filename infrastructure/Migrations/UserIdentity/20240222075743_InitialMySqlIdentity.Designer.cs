@@ -12,7 +12,7 @@ using core.Entities.Identity;
 namespace infrastructure.Migrations.UserIdentity
 {
     [DbContext(typeof(UserIdentityDbContext))]
-    [Migration("20231219230716_InitialMySqlIdentity")]
+    [Migration("20240222075743_InitialMySqlIdentity")]
     partial class InitialMySqlIdentity
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace infrastructure.Migrations.UserIdentity
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.12")
+                .HasAnnotation("ProductVersion", "7.0.15")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);

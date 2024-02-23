@@ -21,7 +21,7 @@ namespace API.ApiExtensions
 
             services.AddDbContext<UserIdentityDbContext>(x=>
                 {x.UseSqlServer(config
-                .GetConnectionString("DefaultConnection"),
+                .GetConnectionString("IdentityConnection"),
                 b => b.MigrationsAssembly("infrastructure")); 
                 
                 });

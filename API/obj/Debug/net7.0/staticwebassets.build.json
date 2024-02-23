@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "o/e823maUIjgkPPtwwVPI1MGFcqTTXc7BaIwHnGU6Tc=",
+  "Hash": "ih7RBxUpgS0cPjKeIwcU/5eXXCDdVO5QcalmVsNOMgg=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "API/wwwroot",
       "Source": "API",
-      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/",
       "BasePath": "_content/API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/.DS_Store",
+      "Identity": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/.DS_Store",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/",
       "BasePath": "_content/API",
       "RelativePath": ".DS_Store",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot/.DS_Store"
     },
     {
-      "Identity": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/assets/bagsale1.jpeg",
+      "Identity": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/assets/bagsale1.jpeg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/",
       "BasePath": "_content/API",
       "RelativePath": "assets/bagsale1.jpeg",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot/assets/bagsale1.jpeg"
     },
     {
-      "Identity": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/assets/bagsale2.jpeg",
+      "Identity": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/assets/bagsale2.jpeg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/",
       "BasePath": "_content/API",
       "RelativePath": "assets/bagsale2.jpeg",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot/assets/bagsale2.jpeg"
     },
     {
-      "Identity": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/assets/bagsale3.jpeg",
+      "Identity": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/assets/bagsale3.jpeg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/",
       "BasePath": "_content/API",
       "RelativePath": "assets/bagsale3.jpeg",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot/assets/bagsale3.jpeg"
     },
     {
-      "Identity": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/assets/bagsale4.jpeg",
+      "Identity": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/assets/bagsale4.jpeg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/",
       "BasePath": "_content/API",
       "RelativePath": "assets/bagsale4.jpeg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot/assets/bagsale4.jpeg"
     },
     {
-      "Identity": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/assets/beach.jpeg",
+      "Identity": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/assets/beach.jpeg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/",
       "BasePath": "_content/API",
       "RelativePath": "assets/beach.jpeg",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot/assets/beach.jpeg"
     },
     {
-      "Identity": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/assets/can-fit4.gif",
+      "Identity": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/assets/can-fit4.gif",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/",
       "BasePath": "_content/API",
       "RelativePath": "assets/can-fit4.gif",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot/assets/can-fit4.gif"
     },
     {
-      "Identity": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/assets/ObandeLogo.jpeg",
+      "Identity": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/assets/ObandeLogo.jpeg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/API/wwwroot/",
+      "ContentRoot": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/API/wwwroot/",
       "BasePath": "_content/API",
       "RelativePath": "assets/ObandeLogo.jpeg",
       "AssetKind": "All",

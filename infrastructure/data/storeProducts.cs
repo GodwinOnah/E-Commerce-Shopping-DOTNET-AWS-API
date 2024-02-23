@@ -20,7 +20,7 @@ namespace infrastructure.data
         public DbSet<Delivery> Delivery { get; set; }
         public DbSet<Order> Order { get; set; }
         public DbSet<Adverts> Adverts { get; set; }
-         public DbSet<AdminOrder> AdminOrder { get; set; }
+        public DbSet<AdminOrder> AdminOrder { get; set; }
         //This code creates configuration of our entities models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

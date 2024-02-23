@@ -4,7 +4,6 @@ namespace core.Entities.Oders
     {
        public  AdminOrder() 
         {
-
         }
 
        public AdminOrder(int Id, IReadOnlyList<ItemOrdered> itemOrdered,
@@ -15,13 +14,9 @@ namespace core.Entities.Oders
             this.Email = email;
             this.address = address;
             this.itemOrdered = itemOrdered;
-            this.delivery = delivery;
-            
-            
-                   
+            this.delivery = delivery;                  
     }
-
-         public int adminOrderId {get; set;}
+        public int adminOrderId {get; set;}
         public string  Email {get; set;}
         public ShippingAddress address {get; set;}
         public IReadOnlyList<ItemOrdered > itemOrdered {get; set;}

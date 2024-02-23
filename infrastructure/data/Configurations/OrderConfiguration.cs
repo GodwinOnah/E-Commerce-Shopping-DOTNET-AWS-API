@@ -10,13 +10,10 @@ namespace infrastructure.data.Configurations
         {
            builder.OwnsOne(x => x.address , y=>{y.WithOwner();
            });
-
            builder.Navigation(x => x.address ).IsRequired();
-
            builder.Property(x => x.orderStatus )
            .HasConversion(y=>y.ToString(),
-           y=>(OrderStatus)Enum.Parse(typeof(OrderStatus),y));
-           
+           y=>(OrderStatus)Enum.Parse(typeof(OrderStatus),y));          
             builder.HasMany(x => x.itemOrdered)
             .WithOne()
             .OnDelete(DeleteBehavior.Cascade);

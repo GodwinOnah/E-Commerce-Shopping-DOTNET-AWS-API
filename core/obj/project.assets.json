@@ -1853,11 +1853,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/godwinonah/Documents/BagShop-API/core/core.csproj",
+      "projectUniqueName": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/core.csproj",
       "projectName": "core",
-      "projectPath": "/Users/godwinonah/Documents/BagShop-API/core/core.csproj",
+      "projectPath": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/core.csproj",
       "packagesPath": "/Users/godwinonah/.nuget/packages/",
-      "outputPath": "/Users/godwinonah/Documents/BagShop-API/core/obj/",
+      "outputPath": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/godwinonah/.nuget/NuGet/NuGet.Config"

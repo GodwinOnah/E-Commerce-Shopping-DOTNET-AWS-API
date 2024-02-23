@@ -71,7 +71,8 @@ builder.Services.AddCors(option=>
                     option.AddPolicy("AllowAccess_To_API",
                         policy=>
                         policy.AllowAnyHeader().AllowAnyMethod()
-                        .AllowCredentials().WithOrigins("https://localhost:4200")
+                        .AllowCredentials().WithOrigins("https://blessingstoreapp.azurewebsites.net",
+                        "https://localhost:4200")
 ));
 
 builder.Services.Configure<ApiBehaviorOptions>(option =>
