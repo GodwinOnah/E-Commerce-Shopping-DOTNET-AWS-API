@@ -51,7 +51,7 @@ BagSho-API  is an e-commerce web application built with ASP.NET Core 7. It all u
 * ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/Author/godwin-onah.png?raw=true)
 ### Project Screenshots
 #### 1
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image1.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image1?raw=true)
 #### 2
 * ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image2.jpeg?raw=true)
 #### 3
