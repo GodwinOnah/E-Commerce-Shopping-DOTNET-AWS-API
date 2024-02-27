@@ -51,41 +51,41 @@ BagSho-API  is an e-commerce web application built with ASP.NET Core 7. It all u
 * ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/Author/godwin-onah.png?raw=true)
 ### Project Screenshots
 #### 1
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image1.png?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image1.png?raw=true)
 #### 2
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image2.png?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image2.png?raw=true)
 #### 3
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image3.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image3.jpeg?raw=true)
 #### 4
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image3.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image3.jpeg?raw=true)
 #### 5
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image5.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image5.jpeg?raw=true)
 #### 6
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image6.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image6.jpeg?raw=true)
 #### 7
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image7.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image7.jpeg?raw=true)
 #### 8
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image8.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image8.jpeg?raw=true)
 #### 9
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image9.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image9.jpeg?raw=true)
 #### 10
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image10.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image10.jpeg?raw=true)
 #### 11
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image11.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image11.jpeg?raw=true)
 #### 12
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image12.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image12.jpeg?raw=true)
 #### 13
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image13.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image13.jpeg?raw=true)
 #### 14
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image14.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image14.jpeg?raw=true)
 #### 15
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image15.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image15.jpeg?raw=true)
 #### 16
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image16.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image16.jpeg?raw=true)
 #### 17
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image17.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image17.jpeg?raw=true)
 #### 18
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image18.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectScreenshots/image18.jpeg?raw=true)
 ### License
 This project is available for use under my approval.
 
