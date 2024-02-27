@@ -14,7 +14,7 @@ BagSho-API  is an e-commerce web application built with ASP.NET Core 7. It all u
 * You can either work with the default postgreSQL database or add connection strings from databases from a cloud service e.g  Azure SQL database. Do configure to your choice in the application entry file.
 * Create an .env file in your project root folder and add your variables. See .env.sample for assistance.
 ### Usage
-* Run npm start to start the application.
+* Run dotnet watch --no-hot-reload to start the application.
 * Connect to the API using Postman using the link https://blessingbagstoe.azurewebsites.net
 ### API Endpoints
 | HTTP Verbs | Endpoints | Action |
@@ -48,7 +48,44 @@ BagSho-API  is an e-commerce web application built with ASP.NET Core 7. It all u
 *  [Azure] Microsoft Azure, often referred to as Azure, is a cloud computing platform run by Microsoft. It offers access, management, and the development of applications and services through global data centers
 ### Authors
 * [Onah Godwin Obande](https://godwinportfolio.azurewebsites.net)
-* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/bags/MyGFHouse.jpeg?raw=true)
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/Author/godwin-onah.png?raw=true)
+### Project Screenshots
+#### 1
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image1.jpeg?raw=true)
+#### 2
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image2.jpeg?raw=true)
+#### 3
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image3.jpeg?raw=true)
+#### 4
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image3.jpeg?raw=true)
+#### 5
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image5.jpeg?raw=true)
+#### 6
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image6.jpeg?raw=true)
+#### 7
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image7.jpeg?raw=true)
+#### 8
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image8.jpeg?raw=true)
+#### 9
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image9.jpeg?raw=true)
+#### 10
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image10.jpeg?raw=true)
+#### 11
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image11.jpeg?raw=true)
+#### 12
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image12.jpeg?raw=true)
+#### 13
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image13.jpeg?raw=true)
+#### 14
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image14.jpeg?raw=true)
+#### 15
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image15.jpeg?raw=true)
+#### 16
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image16.jpeg?raw=true)
+#### 17
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image17.jpeg?raw=true)
+#### 18
+* ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/projectPictures/image18.jpeg?raw=true)
 ### License
 This project is available for use under my approval.
 
