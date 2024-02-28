@@ -1,7 +1,7 @@
 // README.md
 # BagSho-API 
 ### Introduction
-BagSho-API  is an e-commerce web application built with ASP.NET Core 7. It allows users to select and add, then pay for these items after adding them into a redis database (Azure Redis Cashe for this project), pay using stripe card payment system. Orders made are save in an SQL database (Azure SQL database for this project) with ease and efficiency.
+BagSho-API  is an e-commerce web API built with ASP.NET Core 7. It allows users to select and add, then pay for these items after adding them into a redis database (Azure Redis Cashe for this project), pay using stripe card payment system. Orders made are save in an SQL database (Azure SQL database for this project) with ease and efficiency.
 ### Project Support Features
 * Users can signup and login to their accounts
 * Public (non-authenticated) users can access items but will need to login to buy them on this application
@@ -42,9 +42,9 @@ BagSho-API  is an e-commerce web application built with ASP.NET Core 7. It allow
 | DELETE | /admin/id | To delete an order saved on admin table |
 | DELETE | /order/delivery | To delete an advert |
 ### Technologies Used
-* [C#] C# is a general-purpose high-level programming language supporting multiple paradigms. C# encompasses static typing, strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented, and component-oriented programming disciplines.
-* [SQL] Structured Query Language is a domain-specific language used to manage data, especially in a relational database management system. It is particularly useful in handling structured data, i.e., data incorporating relations among entities and variables.
-*  [Azure] Microsoft Azure, often referred to as Azure, is a cloud computing platform run by Microsoft. It offers access, management, and the development of applications and services through global data centers
+* [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) C# is a general-purpose high-level programming language supporting multiple paradigms. C# encompasses static typing, strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented, and component-oriented programming disciplines.
+* [SQL](https://en.wikipedia.org/wiki/SQL) Structured Query Language is a domain-specific language used to manage data, especially in a relational database management system. It is particularly useful in handling structured data, i.e., data incorporating relations among entities and variables.
+*  [Azure](https://portal.azure.com) Microsoft Azure, often referred to as Azure, is a cloud computing platform run by Microsoft. It offers access, management, and the development of applications and services through global data centers
 ### Authors
 * [Onah Godwin Obande](https://godwinportfolio.azurewebsites.net)
 * ![alt text](https://github.com/GodwinOnah/BlessingAPI/blob/main/API/files/Author/godwin-onah.png?raw=true)
