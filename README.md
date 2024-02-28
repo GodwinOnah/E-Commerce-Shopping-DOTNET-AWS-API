@@ -1,7 +1,7 @@
 // README.md
 # BagSho-API 
 ### Introduction
-BagSho-API  is an e-commerce web application built with ASP.NET Core 7. It all users to select and add, then pay for these items by adding them into a redis database (Azure Redis Cashe for this project), pay using stripe card payment system. Orders made are save in an SQL database (Azure SQL database for this project) with ease and efficiency.
+BagSho-API  is an e-commerce web application built with ASP.NET Core 7. It allows users to select and add, then pay for these items after adding them into a redis database (Azure Redis Cashe for this project), pay using stripe card payment system. Orders made are save in an SQL database (Azure SQL database for this project) with ease and efficiency.
 ### Project Support Features
 * Users can signup and login to their accounts
 * Public (non-authenticated) users can access items but will need to login to buy them on this application
@@ -10,7 +10,6 @@ BagSho-API  is an e-commerce web application built with ASP.NET Core 7. It all u
 ### Installation Guide
 * Clone this repository [here](https://github.com/GodwinOnah/BlessingAPI.git)
 * The main branch is the most stable branch at any given time, ensure you're working from it.
-* Run npm install to install all dependencies
 * You can either work with the default postgreSQL database or add connection strings from databases from a cloud service e.g  Azure SQL database. Do configure to your choice in the application entry file.
 * Create an .env file in your project root folder and add your variables. See .env.sample for assistance.
 ### Usage
