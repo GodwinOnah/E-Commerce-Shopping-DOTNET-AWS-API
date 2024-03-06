@@ -1,0 +1,38 @@
+name: publish
+
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      -main
+
+env:
+  AZURE_BAGSHOPAPI_NAME: BlessingAPI
+  AZURE_BAGSHOPAPI_PACKAGE_PATH: "./publish"
+  
+jobs:
+  puiblish:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v4
+
+        - name: Setup.NET 7
+          uses: actions/setup-dotnet@v3
+          with:
+            dotnet-version: '7.0.x'
+            
+        - name: Restore   
+          run: dotnet restore ./Bagshop-API.sln 
+
+        - name: Build  
+          run: dotnet build ./Bagshop-API.sln --configuration Release --no-restore
+
+        - name: Publish 
+          run: dotnet publish ./Bagshop-API.sln --configuration Release --no-build --output '${{ env.AZURE_BAGSHOPAPI_PACKAGE_PATH }}'
+
+        - name: Deployment
+          uses: azure/webapps-deploy@v2
+          with:
+            app-name: ${{ env.AZURE_BAGSHOPAPI_NAME }}
+            publish-profile: ${{ secrets.AZURE_BLESSINGAPI_PROFILE }}
+            package: "${{ env.AZURE_BAGSHOPAPI_PACKAGE_PATH }}"
