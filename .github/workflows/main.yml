@@ -22,13 +22,13 @@ jobs:
             dotnet-version: '7.0.x'
             
         - name: Restore   
-          run: dotnet restore ./Bagshop-API.sln 
+          run: dotnet restore ./BagShop-API.sln 
 
         - name: Build  
-          run: dotnet build ./Bagshop-API.sln --configuration Release --no-restore
+          run: dotnet build ./BagShop-API.sln --configuration Release --no-restore
 
         - name: Publish 
-          run: dotnet publish ./Bagshop-API.sln --configuration Release --no-build --output '${{ env.AZURE_BAGSHOPAPI_PACKAGE_PATH }}'
+          run: dotnet publish ./BagShop-API.sln --configuration Release --no-build --output '${{ env.AZURE_BAGSHOPAPI_PACKAGE_PATH }}'
 
         - name: Deployment
           uses: azure/webapps-deploy@v2
