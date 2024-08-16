@@ -8,11 +8,7 @@ namespace infrastructure.data
 {
     public class productContext : DbContext
     {
-        public productContext(DbContextOptions<productContext> options) : base(options)
-        {
-          
-            Database.EnsureCreated();
-        }
+       
         public DbSet<Products> Products { get; set; }
         public DbSet<ProductBrand> ProductBrand { get; set; }
         public DbSet<ProductType> ProductType { get; set; }
@@ -21,6 +17,13 @@ namespace infrastructure.data
         public DbSet<Order> Order { get; set; }
         public DbSet<Adverts> Adverts { get; set; }
         public DbSet<AdminOrder> AdminOrder { get; set; }
+
+    public productContext(DbContextOptions<productContext> options) : base(options)
+        {
+          
+            Database.EnsureCreated();
+        }
+
         //This code creates configuration of our entities models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -46,3 +46,6 @@
 /Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/obj/Release/net7.0/refint/core.dll
 /Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/obj/Release/net7.0/core.pdb
 /Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/obj/Release/net7.0/ref/core.dll
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/build/core.deps.json
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/build/core.dll
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/build/core.pdb

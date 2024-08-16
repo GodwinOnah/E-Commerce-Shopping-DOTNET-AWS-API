@@ -59,3 +59,11 @@
 /Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/obj/Release/net7.0/infrastructure.pdb
 /Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/obj/Release/net7.0/infrastructure.genruntimeconfig.cache
 /Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/obj/Release/net7.0/ref/infrastructure.dll
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/build/data/ProductsData/Delivery.json
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/build/data/ProductsData/ProductBrands.json
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/build/data/ProductsData/Products.json
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/build/data/ProductsData/ProductTypes.json
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/build/infrastructure.deps.json
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/build/infrastructure.runtimeconfig.json
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/build/infrastructure.dll
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/build/infrastructure.pdb

@@ -12,6 +12,7 @@ namespace infrastructure.data
     {
         private readonly productContext _storeProducts;
         public Hashtable _repository;
+        
         public UnitOfWork(productContext storeProducts)
         {
             _storeProducts = storeProducts;

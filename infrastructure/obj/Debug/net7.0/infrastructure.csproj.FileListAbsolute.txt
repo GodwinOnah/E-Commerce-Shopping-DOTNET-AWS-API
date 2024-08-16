@@ -41,6 +41,7 @@
 /Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/bin/Debug/net7.0/data/ProductsData/Products.json
 /Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/bin/Debug/net7.0/data/ProductsData/ProductTypes.json
 /Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/bin/Debug/net7.0/infrastructure.deps.json
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/bin/Debug/net7.0/infrastructure.runtimeconfig.json
 /Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/bin/Debug/net7.0/infrastructure.dll
 /Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/bin/Debug/net7.0/infrastructure.pdb
 /Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/bin/Debug/net7.0/core.dll
@@ -54,6 +55,5 @@
 /Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/obj/Debug/net7.0/infrastructure.dll
 /Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/obj/Debug/net7.0/refint/infrastructure.dll
 /Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/obj/Debug/net7.0/infrastructure.pdb
-/Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/obj/Debug/net7.0/ref/infrastructure.dll
-/Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/bin/Debug/net7.0/infrastructure.runtimeconfig.json
 /Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/obj/Debug/net7.0/infrastructure.genruntimeconfig.cache
+/Users/godwinonah/Documents/BagShop-API/BlessingAPI/infrastructure/obj/Debug/net7.0/ref/infrastructure.dll

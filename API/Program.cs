@@ -13,6 +13,9 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using infrastructure.Services;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using core.Entities.Interfaces;
 using core;
 using core.Interfaces;
@@ -24,6 +27,7 @@ using System;
 using infrastructure.Identity;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -35,21 +39,54 @@ builder.Services.AddControllers();
 //                 .GetConnectionString("DefaultConnection"),
 //                 x => x.MigrationsHistoryTable("_EFMigrationsHistory")));
 
+
+var server = "DBServer" ?? "ms-sql-server";
+var port = "DBPort" ?? "1443";
+var user = "DBUser";
+var password = "DBPassword";
+var database = "Database";
+var productcontextconnectionstring = $"Server={server},{port}; Initial catalogue={database}; User ID={user}; password={password}";
+var userIdentityconnectionstring = $"Server={server},{port}; Initial catalogue={database}; User ID={user}; password={password}";
+
 //Database configuration for SQL server
 builder.Services.AddDbContext<productContext>(
-                x=>x.UseSqlServer(builder.Configuration
-                .GetConnectionString("DefaultConnection"),
+                x=>x.UseSqlServer(productcontextconnectionstring,
                  options => options.EnableRetryOnFailure()
                 ));
 
 builder.Services.AddSingleton<IConnectionMultiplexer>(c => {
                 var configuration = ConfigurationOptions
-                .Parse(builder.Configuration.GetConnectionString("Redis"),true);
+                             .Parse(builder.Configuration.GetConnectionString("Redis"),true);
                 return ConnectionMultiplexer.Connect(configuration);
                 });
 
+ builder.Services.AddDbContext<UserIdentityDbContext>(
+                x=>x.UseSqlServer(userIdentityconnectionstring,
+                 options => options.EnableRetryOnFailure()
+                ));
+
+builder.Services.AddIdentityCore<User>(opt=>{})
+                        .AddEntityFrameworkStores<UserIdentityDbContext>()
+                        .AddSignInManager<SignInManager<User>>();
+
+            
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                        .AddJwtBearer(opt=>
+                        {opt.TokenValidationParameters
+                         = new TokenValidationParameters 
+                                    {  ValidateIssuerSigningKey = true,
+                                        IssuerSigningKey = 
+                                                new SymmetricSecurityKey
+                                                            (Encoding.UTF8.GetBytes(builder.Configuration["Token:key"])),
+                                                            ValidateIssuer = true,
+                                                            ValidIssuer = builder.Configuration["Token:Issuer"],
+                                                            ValidateAudience = false                           
+                        };});
+                        
+builder.Services.AddAuthorization();
+
 builder.Services.AddSingleton<ICashing,CashingService>();
-builder.Services.AddIdentityService(builder.Configuration);
+// builder.Services.AddIdentityService(builder.Configuration);
 builder.Services.AddSwaggerDocumentation();
 builder.Services.AddScoped<ITokenService,TokenServices>();
 builder.Services.AddScoped<IBasket,BasketRepo>();
