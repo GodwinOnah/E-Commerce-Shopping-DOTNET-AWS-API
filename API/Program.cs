@@ -40,29 +40,33 @@ builder.Services.AddControllers();
 //                 x => x.MigrationsHistoryTable("_EFMigrationsHistory")));
 
 
-var server = "DBServer" ?? "ms-sql-server";
-var port = "DBPort" ?? "1443";
-var user = "DBUser";
-var password = "DBPassword";
-var database = "Database";
-var productcontextconnectionstring = $"Server={server},{port}; Initial catalogue={database}; User ID={user}; password={password}";
-var userIdentityconnectionstring = $"Server={server},{port}; Initial catalogue={database}; User ID={user}; password={password}";
+var server = "localhost";
+var redisserver = "redis";
+var port = "1433";
+var redisport = "6379";
+var user = "Godwin";
+var password = "pass";
+var redispassword = "redispass";
+var database = "Godwindb";
+var productcontextconnectionstring = $"Server={server},{port}; Initial catalog={database}; Trusted_connection=false;Persist Security Info=False; User ID={user}; Password={password};Encrypt=False";
+var userIdentityconnectionstring = $"Server={server},{port}; Initial catalog={database};Trusted_connection=false; Persist Security Info=False; User ID={user}; Password={password};Encrypt=False";
+var redisconnectionstring = $"Server={redisserver},{redisport}; Password={redispassword};Ssl=True,AbortConnect=False";
 
 //Database configuration for SQL server
 builder.Services.AddDbContext<productContext>(
                 x=>x.UseSqlServer(productcontextconnectionstring,
-                 options => options.EnableRetryOnFailure()
+                b => b.MigrationsAssembly("infrastructure")
                 ));
 
 builder.Services.AddSingleton<IConnectionMultiplexer>(c => {
                 var configuration = ConfigurationOptions
-                             .Parse(builder.Configuration.GetConnectionString("Redis"),true);
+                             .Parse(redisconnectionstring,true);
                 return ConnectionMultiplexer.Connect(configuration);
                 });
 
  builder.Services.AddDbContext<UserIdentityDbContext>(
                 x=>x.UseSqlServer(userIdentityconnectionstring,
-                 options => options.EnableRetryOnFailure()
+                 b => b.MigrationsAssembly("infrastructure")
                 ));
 
 builder.Services.AddIdentityCore<User>(opt=>{})

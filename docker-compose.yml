@@ -1,54 +1,100 @@
-version: '3'
 
 services:
 
   ms-sql-server:
     container_name: ms-sql-server-container
-    # platform: linux/amd64
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - 1434:1433
+    restart: unless-stopped
     environment:
       ACCEPT_EULA: "Y"
-      SA_PASSWORD: "pass"
-      MSSQL_PID: Express
-    ports:
-      - 1433:1433
+      MSSQL_SA_PASSWORD: "pass"
+      MSSQL_PID: Developer
     volumes:
-      # - ./../dbinit/init.sql:/docker-entrypoint-initdb.d/0_init.sql
-      - godwin-data:/var/opt/mssql
+      # - ./dbinit/init.sql:/docker-entrypoint-initdb.d/0_init.sql
+      - godwin_data:/var/opt/mssql 
+    networks:
+      - internalnet
+
+  # mysqldb:
+  #   container_name: mysqlcontainer
+  #   # platform: linux/amd64
+  #   image: mysql
+  #   restart: unless-stopped
+  #   volumes: 
+  #     # - ./dbinit/init.sql:/docker-entrypoint-initdb.d/0_init.sql
+  #     - godwin_data:/var/lib/mysql #If you don't define this, logging into a workbench will prompt errors
+  #   ports: 
+  #      - 3307:3306 # mapping from local port to container port
+  #   expose:
+  #     - 3307
+  #   env_file:
+  #      - mysqlenvvariable.env
+  #   networks:
+  #     - internalnet
+
+  phpmyadmin:
+    container_name: phpmyadmincontainer
+    platform: linux/amd64
+    image: phpmyadmin
     restart: always
-    healthcheck:
-      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P ${Sa_Password:-password123} -Q 'SELECT 1' || exit 1"]
-      interval: 10s
-      retries: 10
-      start_period: 10s
-      timeout: 3s
+    depends_on:
+      - ms-sql-server
+    ports:
+      - 8081:80
+    environment:
+       PMA_HOST: ms-sql-server
+    networks:
+      - internalnet
+
+  redis:
+    image: redis:alpine
+    container_name: redis_db
+    command: redis-server --save 20 1 --loglevel warning --requirepass passredis
+    ports:
+      - 6380:6379
+    volumes:
+      - godwin_redis:/data
+    restart: always
+    networks:
+      - internalnet
+
 
   blessinapp:
     container_name: blessingapp-container
     build: .
     ports:
-      - 8080:80
+      - 5001:5000
     depends_on:
       - ms-sql-server
-    environment:
-      DB_HOST: ms-sql-server
-      DB_USER: Godwin 
-      DB_SA_PASSWORD: pass
-      DB_NAME: blessingdb
-      DB_PORT: 1433
-      
-
-  redis:
-    image: redis:alpine
-    container_name: redis_db
-    command: redis-server --appendonly yes
-    ports:
-      - 6379:6379
-    volumes:
-      - godwin-data:/data
-    restart: always
+      # - mysqldb
+      - redis
+    env_file:
+      - dotnetapp.env 
+    # environment:
+    #   DB_HOST: "ms-sql-server"
+    #   DB_USER: "Godwin "
+    #   DB_SA_PASSWORD: pass
+    #   DB_NAME: "blessingdb"
+    #   DB_PORT: "1433"
+    #   REDIS_HOST: "redis"
+    #   REDIS_PORT: "6379"
+    #   REDIS_PASSWORD: "passredis"
+    links:
+      - ms-sql-server
+      # - mysqldb
+      - redis
+    networks:
+      - internalnet
    
+networks:
+  internalnet:
+    driver: bridge
+
+
 volumes:
-  godwin-data:
+  godwin_data:
+  godwin_redis:
   
 

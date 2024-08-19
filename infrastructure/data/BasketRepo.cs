@@ -38,8 +38,8 @@ namespace infrastructure.data
         }
 
         
-//  private readonly StoreContext _context;
-//  public BasketRepository(StoreContext context)
+//  private readonly productContext _context;
+//  public BasketRepository(productContext context)
 // {
 // _context = context;
 // }
