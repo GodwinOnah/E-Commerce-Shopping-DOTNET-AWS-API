@@ -40,12 +40,12 @@ builder.Services.AddControllers();
 //                 x => x.MigrationsHistoryTable("_EFMigrationsHistory")));
 
 
-var server = "localhost";
+var server = "mssql-server";
 var redisserver = "redis";
 var port = "1433";
 var redisport = "6379";
 var user = "Godwin";
-var password = "pass";
+var password = "Godwin1@@";
 var redispassword = "redispass";
 var database = "Godwindb";
 var productcontextconnectionstring = $"Server={server},{port}; Initial catalog={database}; Trusted_connection=false;Persist Security Info=False; User ID={user}; Password={password};Encrypt=False";

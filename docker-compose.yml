@@ -1,50 +1,21 @@
 
 services:
 
-  ms-sql-server:
-    container_name: ms-sql-server-container
-    image: mcr.microsoft.com/mssql/server:2022-latest
+  mssql-server:
+    container_name: mssql-server-container
+    image: mcr.microsoft.com/azure-sql-edge:latest
     ports:
       - 1434:1433
     restart: unless-stopped
-    environment:
-      ACCEPT_EULA: "Y"
-      MSSQL_SA_PASSWORD: "pass"
-      MSSQL_PID: Developer
+    env_file:
+      - mssqlenvvariable.env 
+    # environment:
+    #   ACCEPT_EULA: ${ACCEPT_EULA}
+    #   SA_PASSWORD: ${SA_PASSWORD}
+    #   MSSQL_PID: Developer
     volumes:
       # - ./dbinit/init.sql:/docker-entrypoint-initdb.d/0_init.sql
       - godwin_data:/var/opt/mssql 
-    networks:
-      - internalnet
-
-  # mysqldb:
-  #   container_name: mysqlcontainer
-  #   # platform: linux/amd64
-  #   image: mysql
-  #   restart: unless-stopped
-  #   volumes: 
-  #     # - ./dbinit/init.sql:/docker-entrypoint-initdb.d/0_init.sql
-  #     - godwin_data:/var/lib/mysql #If you don't define this, logging into a workbench will prompt errors
-  #   ports: 
-  #      - 3307:3306 # mapping from local port to container port
-  #   expose:
-  #     - 3307
-  #   env_file:
-  #      - mysqlenvvariable.env
-  #   networks:
-  #     - internalnet
-
-  phpmyadmin:
-    container_name: phpmyadmincontainer
-    platform: linux/amd64
-    image: phpmyadmin
-    restart: always
-    depends_on:
-      - ms-sql-server
-    ports:
-      - 8081:80
-    environment:
-       PMA_HOST: ms-sql-server
     networks:
       - internalnet
 
@@ -60,6 +31,19 @@ services:
     networks:
       - internalnet
 
+  jenkins:
+    image: jenkins/jenkins
+    container_name: jenkins-container
+#    user: root
+#    privileged: true
+    restart: always
+    ports:
+      - "8085:8080"
+      - "50000:50000"
+    volumes:
+      - godwin_jenkins:/var/jenkins_home
+    networks:
+      - internalnet
 
   blessinapp:
     container_name: blessingapp-container
@@ -67,23 +51,21 @@ services:
     ports:
       - 5001:5000
     depends_on:
-      - ms-sql-server
-      # - mysqldb
+      - mssql-server
       - redis
     env_file:
-      - dotnetapp.env 
+      - donetapp.env 
     # environment:
-    #   DB_HOST: "ms-sql-server"
-    #   DB_USER: "Godwin "
-    #   DB_SA_PASSWORD: pass
-    #   DB_NAME: "blessingdb"
-    #   DB_PORT: "1433"
-    #   REDIS_HOST: "redis"
-    #   REDIS_PORT: "6379"
-    #   REDIS_PASSWORD: "passredis"
+    #   DB_HOST: ${DB_HOST}
+    #   DB_USER: ${DB_USER}
+    #   DB_SA_PASSWORD: ${DB_SA_PASSWORD}
+    #   DB_NAME: ${DB_NAME}
+    #   DB_PORT: ${DB_PORT}
+    #   REDIS_HOST: ${REDIS_HOST}
+    #   REDIS_PORT: ${REDIS_PORT}
+    #   REDIS_PASSWORD: ${REDIS_PASSWORD}
     links:
-      - ms-sql-server
-      # - mysqldb
+      - mssql-server
       - redis
     networks:
       - internalnet
@@ -96,5 +78,5 @@ networks:
 volumes:
   godwin_data:
   godwin_redis:
-  
+  godwin_jenkins:
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2utH7v/053DSXx1IXR7i8J7v30jeKrc7QMbyIQjWlvOjvp87JXJVLKBI8vbvzK0jNiQnH/dKE4C3ntS9UvgCMA==",
+  "dgSpecHash": "yHZz4NvImELAIH05S78lZgjsAbaIG8XY5dC2DhtRQlvagFkChqQB3mYqseaeSRJ/MwoGZasoYp19i4JXNAmeIg==",
   "success": true,
   "projectFilePath": "/Users/godwinonah/Documents/BagShop-API/BlessingAPI/core/core.csproj",
   "expectedPackageFiles": [
@@ -42,15 +42,33 @@
     "/Users/godwinonah/.nuget/packages/microsoft.extensions.webencoders/2.2.0/microsoft.extensions.webencoders.2.2.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.net.http.headers/2.2.0/microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.netcore.platforms/2.0.0/microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/microsoft.win32.registry/4.5.0/microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/runtime.native.system/4.3.0/runtime.native.system.4.3.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.buffers/4.5.0/system.buffers.4.5.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.collections/4.3.0/system.collections.4.3.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.diagnostics.tracing/4.3.0/system.diagnostics.tracing.4.3.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.globalization/4.3.0/system.globalization.4.3.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.io/4.3.0/system.io.4.3.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.net.nameresolution/4.3.0/system.net.nameresolution.4.3.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.net.primitives/4.3.0/system.net.primitives.4.3.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.reflection/4.3.0/system.reflection.4.3.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.reflection.primitives/4.3.0/system.reflection.primitives.4.3.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.resources.resourcemanager/4.3.0/system.resources.resourcemanager.4.3.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.runtime.extensions/4.3.0/system.runtime.extensions.4.3.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.runtime.handles/4.3.0/system.runtime.handles.4.3.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.runtime.interopservices/4.3.0/system.runtime.interopservices.4.3.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.security.accesscontrol/4.5.0/system.security.accesscontrol.4.5.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.security.cryptography.pkcs/4.5.0/system.security.cryptography.pkcs.4.5.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.security.cryptography.xml/4.5.0/system.security.cryptography.xml.4.5.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.security.permissions/4.5.0/system.security.permissions.4.5.0.nupkg.sha512",
     "/Users/godwinonah/.nuget/packages/system.security.principal.windows/4.5.0/system.security.principal.windows.4.5.0.nupkg.sha512",
-    "/Users/godwinonah/.nuget/packages/system.text.encodings.web/4.5.0/system.text.encodings.web.4.5.0.nupkg.sha512"
+    "/Users/godwinonah/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.text.encodings.web/4.5.0/system.text.encodings.web.4.5.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.threading/4.3.0/system.threading.4.3.0.nupkg.sha512",
+    "/Users/godwinonah/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

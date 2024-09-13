@@ -9,6 +9,7 @@
   <ItemGroup>
   <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
   <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.5" />
+  <PackageReference Include="System.Net.NameResolution" Version="4.3.0" />
   </ItemGroup>
 
 </Project>
